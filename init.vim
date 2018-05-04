@@ -10,8 +10,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'valloric/youcompleteme'
-
 Plugin 'morhetz/gruvbox'
+Plugin 'vim-scripts/The-NERD-tree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,6 +33,10 @@ set incsearch
 " show tabs and unwanted spaces
 set listchars=tab:>-,trail:-   "show tabs as >--- and trailing spaces as -
 set list                       "show this
+
+" nerd tree
+let g:NERDTreeWinPos="right"
+nnoremap ø : NERDTreeToggle <CR>
 
 " pretty colors, gruvbox-dark is fucking awesome
 colorscheme gruvbox
