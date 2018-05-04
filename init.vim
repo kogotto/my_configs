@@ -41,3 +41,8 @@ nnoremap ø : NERDTreeToggle <CR>
 " pretty colors, gruvbox-dark is fucking awesome
 colorscheme gruvbox
 set background=dark
+
+" YCM aliases
+nnoremap <F12> : YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <F5> :  YcmForceCompileAndDiagnostics<CR><CR>
+nnoremap <F11> : YcmCompleter FixIt<CR>
