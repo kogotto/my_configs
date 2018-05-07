@@ -20,6 +20,7 @@ filetype plugin indent on    " required
 " some sweets
 set number
 syntax on
+imap jj <Esc>
 
 " tabs and intendation
 set tabstop=2              " visualise tab as %tabstop% spaces
