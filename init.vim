@@ -21,6 +21,7 @@ filetype plugin indent on    " required
 set number
 syntax on
 imap jj <Esc>
+set path+=**
 
 " tabs and intendation
 set tabstop=2              " visualise tab as %tabstop% spaces
