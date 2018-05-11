@@ -41,6 +41,10 @@ set list                       "show this
 let g:NERDTreeWinPos="right"
 nnoremap ø : NERDTreeToggle <CR>
 
+" CtrlP settings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " pretty colors, gruvbox-dark is fucking awesome
 colorscheme gruvbox
 set background=dark
