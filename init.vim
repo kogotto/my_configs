@@ -13,6 +13,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
