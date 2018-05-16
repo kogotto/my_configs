@@ -29,6 +29,7 @@ set path+=**
 set tabstop=2              " visualise tab as %tabstop% spaces
 set softtabstop=2          " insert % spaces when you hit tab
 set expandtab              " make tab just a shortcut for inserting spaces
+set smartindent            "
 
 " search
 set hlsearch
