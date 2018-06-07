@@ -52,6 +52,8 @@ let g:ctrlp_cmd = 'CtrlP'
 colorscheme gruvbox
 set background=dark
 
+set colorcolumn=79
+
 " YCM aliases
 nnoremap <F12> : YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <F5> :  YcmForceCompileAndDiagnostics<CR><CR>
