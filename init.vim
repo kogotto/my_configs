@@ -22,6 +22,7 @@ filetype plugin indent on    " required
 
 " some sweets
 set number
+set relativenumber
 syntax on
 imap jj <Esc>
 set path+=**
