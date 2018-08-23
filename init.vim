@@ -30,6 +30,7 @@ set path+=**
 " tabs and intendation
 set tabstop=2              " visualise tab as %tabstop% spaces
 set softtabstop=2          " insert % spaces when you hit tab
+set shiftwidth=2           "
 set expandtab              " make tab just a shortcut for inserting spaces
 set smartindent            "
 
