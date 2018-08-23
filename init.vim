@@ -56,6 +56,8 @@ set background=dark
 
 set colorcolumn=79
 
+" YCM settings
+let g:ycm_confirm_extra_conf = 0
 " YCM aliases
 nnoremap <F12> : YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <F5> :  YcmForceCompileAndDiagnostics<CR><CR>
