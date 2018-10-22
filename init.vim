@@ -27,6 +27,7 @@ set relativenumber
 syntax on
 imap jj <Esc>
 set path+=**
+set autoread
 
 " tabs and intendation
 set tabstop=2              " visualise tab as %tabstop% spaces
