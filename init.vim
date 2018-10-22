@@ -26,6 +26,9 @@ set number
 set relativenumber
 syntax on
 imap jj <Esc>
+imap jJ <Esc>
+imap Jj <Esc>
+imap JJ <Esc>
 set path+=**
 set autoread
 
