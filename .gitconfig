@@ -1,0 +1,13 @@
+[user]
+	name = Yakov Didenko
+	email = kogotto@yandex-team.ru
+[core]
+	editor = nvim
+[alias]
+	hist = log --oneline --graph --decorate
+	last = log -1
+	undo = reset --soft HEAD^
+[push]
+	default = simple
+[submodule]
+	recurse = true
