@@ -44,6 +44,8 @@ nnoremap g7 7gt
 nnoremap g8 8gt
 nnoremap g9 9gt
 
+nnoremap <C-w>t :tabnew<CR>
+
 " tabs and intendation
 set tabstop=4              " visualise tab as %tabstop% spaces
 set softtabstop=4          " insert % spaces when you hit tab
