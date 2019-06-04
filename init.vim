@@ -17,6 +17,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'derekwyatt/vim-fswitch'
+Plugin 'kris2k/a.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,6 +46,11 @@ nnoremap g8 8gt
 nnoremap g9 9gt
 
 nnoremap <C-w>t :tabnew<CR>
+
+" alternate files switch
+nnoremap <F2> :AV<CR>
+nnoremap <F3> :AT<CR>
+nnoremap <F4> :A<CR>
 
 " tabs and intendation
 set tabstop=4              " visualise tab as %tabstop% spaces
