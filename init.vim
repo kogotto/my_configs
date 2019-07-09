@@ -70,6 +70,7 @@ set list                       "show this
 " nerd tree
 let g:NERDTreeWinPos="right"
 nnoremap ø : NERDTreeToggle <CR>
+nnoremap ∆ : NERDTreeFind <CR>
 
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'
