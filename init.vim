@@ -32,7 +32,10 @@ imap jJ <Esc>
 imap Jj <Esc>
 imap JJ <Esc>
 set path+=**
+
 set autoread
+autocmd CursorHold * checktime
+
 nnoremap n nzz
 nnoremap N Nzz
 
