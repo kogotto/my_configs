@@ -33,6 +33,8 @@ imap Jj <Esc>
 imap JJ <Esc>
 set path+=**
 set autoread
+nnoremap n nzz
+nnoremap N Nzz
 
 " tab switch
 nnoremap g1 1gt
