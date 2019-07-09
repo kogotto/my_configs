@@ -26,6 +26,10 @@ filetype plugin indent on    " required
 " some sweets
 set number
 set relativenumber
+
+set cursorline     " highlite line with cursor
+set cursorcolumn   " highlite column with cursor
+
 syntax on
 imap jj <Esc>
 imap jJ <Esc>
