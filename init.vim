@@ -27,8 +27,11 @@ filetype plugin indent on    " required
 set number
 set relativenumber
 
-set cursorline     " highlite line with cursor
-set cursorcolumn   " highlite column with cursor
+" highlite line/column only in current window
+autocmd WinEnter * setlocal cursorline
+autocmd WinEnter * setlocal cursorcolumn
+autocmd WinLeave * setlocal nocursorline
+autocmd WinLeave * setlocal nocursorcolumn
 
 syntax on
 imap jj <Esc>
