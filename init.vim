@@ -81,6 +81,7 @@ set list                       "show this
 
 " nerd tree
 let g:NERDTreeWinPos="right"
+let g:NERDTreeWinSize=80
 nnoremap ø : NERDTreeToggle <CR>
 nnoremap ∆ : NERDTreeFind <CR>
 
