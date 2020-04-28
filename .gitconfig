@@ -6,8 +6,9 @@
 [alias]
 	hist = log --oneline --graph --decorate
 	last = log -1
-    staged = diff --staged
+	staged = diff --staged
 	undo = reset --soft HEAD^
+	destroy = reset --hard HEAD^
 	h = log --oneline --graph --decorate -10
 [push]
 	default = simple
