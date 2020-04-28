@@ -75,6 +75,7 @@ set smartindent            "
 " search
 set hlsearch
 set incsearch
+set ignorecase
 
 " show tabs and unwanted spaces
 set listchars=tab:>-,trail:-   "show tabs as >--- and trailing spaces as -
