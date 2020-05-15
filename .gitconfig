@@ -10,6 +10,8 @@
 	undo = reset --soft HEAD^
 	destroy = reset --hard HEAD^
 	h = log --oneline --graph --decorate -10
+    dd = diff develop...
+    dm = diff master...
 [push]
 	default = simple
 [submodule]
