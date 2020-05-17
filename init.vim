@@ -19,6 +19,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'kris2k/a.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'mkitt/tabline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
