@@ -61,6 +61,9 @@ nnoremap g9 9gt
 
 nnoremap <C-w>t :tabnew<CR>
 
+" clone current window in new tab
+nnoremap <C-w>n <C-w>v<C-w>T
+
 " alternate files switch
 nnoremap <F2> :AV<CR>
 nnoremap <F3> :AT<CR>
