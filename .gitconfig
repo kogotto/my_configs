@@ -1,18 +1,20 @@
+# This is Git's per-user configuration file.
 [user]
+# Please adapt and uncomment the following lines:
 	name = Yakov Didenko
-	email = kogotto@yandex-team.ru
-[core]
-	editor = nvim
+	email = yakov.didenko@glidewelldental.com
+
 [alias]
+# Pretty log
 	hist = log --oneline --graph --decorate
+	h = hist master..HEAD
+	hf = hist -10
+	my = log --author='Yakov'
 	last = log -1
-	staged = diff --staged
+
+# Edit history
 	undo = reset --soft HEAD^
 	destroy = reset --hard HEAD^
-	h = log --oneline --graph --decorate -10
-    dd = diff develop...
-    dm = diff master...
-[push]
-	default = simple
-[submodule]
-	recurse = true
+
+# Some sweets
+	staged = diff --staged
