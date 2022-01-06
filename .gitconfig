@@ -2,8 +2,9 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Yakov Didenko
-	email = yakov.didenko@glidewelldental.com
-
+	email = kogotto@gmail.com
+[core]
+	editor = nvim
 [alias]
 # Pretty log
 	hist = log --oneline --graph --decorate
@@ -18,3 +19,9 @@
 
 # Some sweets
 	staged = diff --staged
+
+[push]
+	default = simple
+
+[submodule]
+	recurse = true
