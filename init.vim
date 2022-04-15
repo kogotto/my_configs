@@ -88,8 +88,12 @@ set list                       "show this
 " nerd tree
 let g:NERDTreeWinPos="right"
 let g:NERDTreeWinSize=80
+"    this is for mac
 nnoremap ø : NERDTreeToggle <CR>
 nnoremap ∆ : NERDTreeFind <CR>
+"    this is for linux/windows and others who have 'Alt' key
+nnoremap <M-o> : NERDTreeToggle <CR>
+nnoremap <M-j> : NERDTreeFind <CR>
 
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'
