@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while inotifywait $(pwd) -e close_write -qq;
+do
+    $@;
+done
