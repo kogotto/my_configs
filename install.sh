@@ -6,3 +6,7 @@ mkdir -p ~/.config/nvim
 ln -s $(realpath init.vim) ~/.config/nvim/
 
 ln -s $(realpath .tmux.conf) ~/
+
+./kin kin
+
+kin watching
