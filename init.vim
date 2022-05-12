@@ -66,9 +66,9 @@ nnoremap <C-w>t :tabnew<CR>
 nnoremap <C-w>n <C-w>v<C-w>T
 
 " alternate files switch
-nnoremap <F2> :AV<CR>
-nnoremap <F3> :AT<CR>
-nnoremap <F4> :A<CR>
+nnoremap <F2> :AV<CR>      " vertical split and switch
+nnoremap <F3> :AT<CR>      " new tab and switch
+nnoremap <F4> :A<CR>       " just switch
 
 " tabs and intendation
 set tabstop=4              " visualise tab as %tabstop% spaces
