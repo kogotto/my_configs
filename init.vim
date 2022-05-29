@@ -36,6 +36,10 @@ autocmd WinEnter * setlocal cursorcolumn
 autocmd WinLeave * setlocal nocursorline
 autocmd WinLeave * setlocal nocursorcolumn
 
+" Save current session on every file save in current dirrectory in file
+" Session.vim
+autocmd BufWritePost * : mksession!
+
 syntax on
 imap jj <Esc>
 imap jJ <Esc>
