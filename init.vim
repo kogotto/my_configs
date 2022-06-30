@@ -50,6 +50,10 @@ set path+=**
 set autoread
 autocmd CursorHold * checktime
 
+" Just highlight word under cursor, do not jump to next
+nnoremap * *N
+nnoremap # #N
+
 nnoremap n nzz
 nnoremap N Nzz
 
