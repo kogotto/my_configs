@@ -73,6 +73,9 @@ nnoremap <C-w>t :tabnew<CR>
 " clone current window in new tab
 nnoremap <C-w>n <C-w>v<C-w>T
 
+" Find symbol under cursor in new window
+nmap <C-w><F12> <C-w>v<C-w><C-w><F12>
+
 " alternate files switch
 nnoremap <F2> :AV<CR>      " vertical split and switch
 nnoremap <F3> :AT<CR>      " new tab and switch
