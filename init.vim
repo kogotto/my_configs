@@ -58,15 +58,15 @@ nnoremap n nzz
 nnoremap N Nzz
 
 " tab switch
-nnoremap g1 1gt
-nnoremap g2 2gt
-nnoremap g3 3gt
-nnoremap g4 4gt
-nnoremap g5 5gt
-nnoremap g6 6gt
-nnoremap g7 7gt
-nnoremap g8 8gt
-nnoremap g9 9gt
+nnoremap <C-F1> 1gt
+nnoremap <C-F2> 2gt
+nnoremap <C-F3> 3gt
+nnoremap <C-F4> 4gt
+nnoremap <C-F5> 5gt
+nnoremap <C-F6> 6gt
+nnoremap <C-F7> 7gt
+nnoremap <C-F8> 8gt
+nnoremap <C-F9> 9gt
 
 nnoremap <C-w>t :tabnew<CR>
 
