@@ -121,6 +121,7 @@ set colorcolumn=79
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1
 let g:ycm_disable_for_files_larger_than_kb = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 " YCM aliases
 nnoremap <F12> : YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <F5> :  YcmForceCompileAndDiagnostics<CR><CR>
