@@ -7,3 +7,6 @@ function cd_ls {
     cd $@; ls;
 }
 alias cd='cd_ls'
+
+# Tmuxinator is too long for typing
+alias mux='tmuxinator'
