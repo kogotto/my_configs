@@ -10,3 +10,7 @@ alias cd='cd_ls'
 
 # Tmuxinator is too long for typing
 alias mux='tmuxinator'
+
+# This will automatically start ssh-agent and ssh-add
+# Do not forget install keychain package
+eval $(keychain -q --eval id_rsa)
