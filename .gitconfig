@@ -8,7 +8,7 @@
 [alias]
 # Pretty log
 	hist = log --oneline --graph --decorate
-	h = hist develop..HEAD
+	h = hist master..HEAD
 	hf = hist -10
 	my = log --author='Yakov'
 	last = log -1
