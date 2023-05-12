@@ -2,6 +2,8 @@
 set nocompatible
 filetype off
 
+let mapleader = " "
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -58,15 +60,15 @@ nnoremap n nzz
 nnoremap N Nzz
 
 " tab switch
-nnoremap <C-F1> 1gt
-nnoremap <C-F2> 2gt
-nnoremap <C-F3> 3gt
-nnoremap <C-F4> 4gt
-nnoremap <C-F5> 5gt
-nnoremap <C-F6> 6gt
-nnoremap <C-F7> 7gt
-nnoremap <C-F8> 8gt
-nnoremap <C-F9> 9gt
+nnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt
 
 nnoremap <C-w>t :tabnew<CR>
 
