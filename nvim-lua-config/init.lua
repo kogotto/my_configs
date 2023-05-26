@@ -6,3 +6,4 @@ require("kogo.core.keymaps")
 require("kogo.core.colorscheme")
 
 require("kogo.plugins.treesitter")
+require("kogo.plugins.lsp")
