@@ -43,6 +43,13 @@ return packer.startup(function(use)
     -- Code highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+    -- Easy commet out
+    use('tpope/vim-commentary')
+    -- Easy surroundings
+    use('tpope/vim-surround')
+    -- git integration
+    use('tpope/vim-fugitive')
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
