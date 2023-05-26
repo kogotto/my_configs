@@ -39,6 +39,9 @@ return packer.startup(function(use)
     use('nvim-tree/nvim-tree.lua')
     use('nvim-tree/nvim-web-devicons') -- Cool icons for filetypes in tree
 
+    -- Cool statusline
+    use('nvim-lualine/lualine.nvim')
+
     -- Cool way to search/grep files, buffers
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
