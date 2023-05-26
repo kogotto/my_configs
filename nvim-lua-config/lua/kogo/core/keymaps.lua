@@ -45,6 +45,10 @@ keymap.set("n", "<leader>9", "9gt")
 
 -- Plugins
 
+---- Nvim-tree
+keymap.set('n', '<leader>o', ':NvimTreeToggle<CR>')
+keymap.set('n', '<leader>j', ':NvimTreeFindFileToggle<CR>')
+
 ---- Telescope
 local telescopeBuiltin = require('telescope.builtin')
 keymap.set('n', '<leader>pf', telescopeBuiltin.find_files, {})

@@ -35,6 +35,10 @@ return packer.startup(function(use)
     -- Colorscheme
     use('morhetz/gruvbox')
 
+    -- Tree explorer
+    use('nvim-tree/nvim-tree.lua')
+    use('nvim-tree/nvim-web-devicons') -- Cool icons for filetypes in tree
+
     -- Cool way to search/grep files, buffers
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
