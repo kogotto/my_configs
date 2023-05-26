@@ -29,6 +29,8 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.listchars = "tab:>-,trail:-" -- show tabs as >--- and trailing spaces as -
+opt.list = true
 
 -- Backspace
 opt.backspace = "indent,eol,start"
