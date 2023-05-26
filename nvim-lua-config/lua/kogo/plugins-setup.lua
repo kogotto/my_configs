@@ -35,6 +35,7 @@ return packer.startup(function(use)
     -- Colorscheme
     use('morhetz/gruvbox')
 
+    -- Cool way to search/grep files, buffers
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
