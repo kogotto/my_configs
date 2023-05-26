@@ -10,6 +10,10 @@ keymap.set("i", "Jj", "<ESC>")
 keymap.set("i", "JJ", "<ESC>")
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- drop search highlight
+keymap.set("n", "*", "*N") -- just highlight word under cursor
+keymap.set("n", "#", "#N") -- do not jump to next
+keymap.set("n", "n", "nzzzv") -- keep found word at middle of
+keymap.set("n", "N", "Nzzzv") -- the screen
 
 keymap.set("n", "x", '"_x') -- do not copy removed character
 

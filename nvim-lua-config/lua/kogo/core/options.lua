@@ -31,6 +31,7 @@ opt.background = "dark"
 opt.signcolumn = "yes"
 opt.listchars = "tab:>-,trail:-" -- show tabs as >--- and trailing spaces as -
 opt.list = true
+opt.colorcolumn = "80"
 
 -- Backspace
 opt.backspace = "indent,eol,start"
