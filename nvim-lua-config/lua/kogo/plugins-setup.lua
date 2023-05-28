@@ -69,9 +69,16 @@ return packer.startup(function(use)
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/nvim-cmp'},              -- Autocompletion engine
+
+            {'L3MON4D3/LuaSnip'},              -- Snippet engine
+            {'saadparwaiz1/cmp_luasnip'},      -- nvim-cmp source for engine above
+            {'rafamadriz/friendly-snippets'},  -- Snippet collection
+
+            {'hrsh7th/cmp-path'},              -- nvim-cmp source for filepaths
+            {'hrsh7th/cmp-buffer'},            -- nvim-cmp source for words from open files
+
             {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
 
