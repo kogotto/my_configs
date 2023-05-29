@@ -11,3 +11,5 @@ require("kogo.plugins.treesitter")
 require("kogo.plugins.nvim-cmp")
 
 require("kogo.plugins.lsp.mason")
+require("kogo.plugins.lsp.lspsaga")
+require("kogo.plugins.lsp.lspconfig")

@@ -68,14 +68,18 @@ return packer.startup(function(use)
     use('hrsh7th/cmp-path')              -- nvim-cmp source for filepaths
     use('hrsh7th/cmp-buffer')            -- nvim-cmp source for words from open files
 
-    -- {'hrsh7th/cmp-nvim-lsp'}, -- Required
-
     -- Lsp servers manager
     use('williamboman/mason.nvim', {run = function() pcall(vim.cmd, 'MasonUpdate') end})
     use('williamboman/mason-lspconfig.nvim')
 
     -- Configuring lsp servers
     use('neovim/nvim-lspconfig')
+    use('hrsh7th/cmp-nvim-lsp')          -- nvim-cmp source for lsp
+    use({                                -- lsp ui
+        'glepnir/lspsaga.nvim',
+        branch = 'main'
+    })
+    use('onsails/lspkind.nvim')         -- add devicons to lsp
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
