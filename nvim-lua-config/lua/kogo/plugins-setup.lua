@@ -58,29 +58,24 @@ return packer.startup(function(use)
     -- git integration
     use('tpope/vim-fugitive')
 
+    -- Autocompletion
+    use('hrsh7th/nvim-cmp')              -- Autocompletion engine
+
+    use('L3MON4D3/LuaSnip')              -- Snippet engine
+    use('saadparwaiz1/cmp_luasnip')      -- nvim-cmp source for engine above
+    use('rafamadriz/friendly-snippets')  -- Snippet collection
+
+    use('hrsh7th/cmp-path')              -- nvim-cmp source for filepaths
+    use('hrsh7th/cmp-buffer')            -- nvim-cmp source for words from open files
+
+    -- {'hrsh7th/cmp-nvim-lsp'}, -- Required
+
     -- Lsp servers manager
     use('williamboman/mason.nvim', {run = function() pcall(vim.cmd, 'MasonUpdate') end})
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    use('williamboman/mason-lspconfig.nvim')
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},              -- Autocompletion engine
-
-            {'L3MON4D3/LuaSnip'},              -- Snippet engine
-            {'saadparwaiz1/cmp_luasnip'},      -- nvim-cmp source for engine above
-            {'rafamadriz/friendly-snippets'},  -- Snippet collection
-
-            {'hrsh7th/cmp-path'},              -- nvim-cmp source for filepaths
-            {'hrsh7th/cmp-buffer'},            -- nvim-cmp source for words from open files
-
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        }
-    }
+    -- Configuring lsp servers
+    use('neovim/nvim-lspconfig')
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
