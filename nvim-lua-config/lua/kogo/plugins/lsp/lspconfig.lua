@@ -39,7 +39,17 @@ end
 
 local capabilities = cmpNvimLsp.default_capabilities()
 
-lspConfig['clangd'].setup({
+lspConfig.clangd.setup({
+    capabilities = capabilities,
+    on_attach = onAttach,
+})
+
+lspConfig.cmake.setup({
+    capabilities = capabilities,
+    on_attach = onAttach,
+})
+
+lspConfig.pylsp.setup({
     capabilities = capabilities,
     on_attach = onAttach,
 })
