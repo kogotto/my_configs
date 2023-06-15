@@ -7,6 +7,7 @@ require("kogo.core.colorscheme")
 
 require("kogo.plugins.nvim-tree")
 require("kogo.plugins.lualine")
+require("kogo.plugins.telescope")
 require("kogo.plugins.treesitter")
 require("kogo.plugins.nvim-cmp")
 

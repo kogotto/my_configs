@@ -44,8 +44,14 @@ return packer.startup(function(use)
 
     -- Cool way to search/grep files, buffers
     use {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
+    }
+    use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = {
+            {'nvim-lua/plenary.nvim'}
+        }
     }
 
     -- Code highlighting
