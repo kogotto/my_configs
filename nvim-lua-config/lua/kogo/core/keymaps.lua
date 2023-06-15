@@ -24,7 +24,8 @@ keymap.set("n", "<leader>-", "<C-x>")
 keymap.set("n", "<leader>sv", "<C-w>v") -- [v]ertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- [h]oriontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make [e]qual splits size
-keymap.set("n", "<leader>sx", "<C-w>c") -- close split
+keymap.set("n", "<leader>sx", "<C-w>c") -- [c]lose split
+keymap.set("n", "<leader>so", "<C-w>o") -- close all splits, except for current
 keymap.set("n", "<leader><leader>", "<C-w><C-w>") -- next split
 
 -- [t]abs
