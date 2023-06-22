@@ -20,6 +20,8 @@ keymap.set("n", "x", '"_x') -- do not copy removed character
 keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
+keymap.set("n", "<leader>ax", ":! chmod +x %<CR>") -- make current file executable
+
 -- [s]plit windows
 keymap.set("n", "<leader>sv", "<C-w>v") -- [v]ertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- [h]oriontally
