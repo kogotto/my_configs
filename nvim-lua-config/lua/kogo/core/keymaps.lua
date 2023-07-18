@@ -33,6 +33,7 @@ keymap.set("n", "<leader><leader>", "<C-w><C-w>") -- next split
 -- [t]abs
 keymap.set("n", "<leader>tc", ":tabnew<CR>") -- [c]reate new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+keymap.set("n", "<leader>to", ":tabonly<CR>") -- leave [o]nly current tab
 keymap.set("n", "<leader>tn", ":tabnext<CR>") -- [n]ext tab
 keymap.set("n", "<leader>tp", ":tabprev<CR>") -- [p]revious tab
 keymap.set("n", "<leader>tm", "<C-w>T") -- [m]ove current window to new tab
