@@ -8,6 +8,9 @@ function cd_ls {
 }
 alias cd='cd_ls'
 
+# I always type vim
+alias vim='nvim'
+
 # Tmuxinator is too long for typing
 alias mux='tmuxinator'
 
