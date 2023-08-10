@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PROJ=$(tmuxinator list -n | grep -v projects | fzf)
+
+tmuxinator $PROJ
