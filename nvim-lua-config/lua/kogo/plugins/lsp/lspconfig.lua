@@ -25,7 +25,6 @@ local onAttach = function(client, buf)
         buffer = buf,
     }
 
-    keymap.set('n', 'gf', '<cmd>Lspsaga lsp_finder<CR>', opts)
     keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     keymap.set('n', 'gD', '<cmd>Lspsaga peek_definition<CR>', opts)
     keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
