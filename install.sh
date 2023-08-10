@@ -13,3 +13,4 @@ ln -s $(realpath .tmux.conf) ~/
 ./kin kin
 
 kin watching
+kin trpt
