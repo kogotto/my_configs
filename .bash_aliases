@@ -16,4 +16,4 @@ alias mux='tmuxinator'
 
 # This will automatically start ssh-agent and ssh-add
 # Do not forget install keychain package
-eval $(keychain -q --eval id_rsa)
+alias prepare-ssh-keys='eval $(keychain -q --eval id_rsa)'
