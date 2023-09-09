@@ -37,6 +37,7 @@ keymap.set("n", "<leader>to", ":tabonly<CR>") -- leave [o]nly current tab
 keymap.set("n", "<leader>tn", ":tabnext<CR>") -- [n]ext tab
 keymap.set("n", "<leader>tp", ":tabprev<CR>") -- [p]revious tab
 keymap.set("n", "<leader>tm", "<C-w>T") -- [m]ove current window to new tab
+keymap.set("n", "<leader>ty", "<C-w>s<C-w>T") -- clone current window in new tab
 -- go to 'n'th tab
 keymap.set("n", "<leader>1", "1gt")
 keymap.set("n", "<leader>2", "2gt")
