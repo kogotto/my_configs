@@ -42,6 +42,9 @@ return packer.startup(function(use)
     -- Cool statusline
     use('nvim-lualine/lualine.nvim')
 
+    -- Cool tabline
+    use('crispgm/nvim-tabline')
+
     -- Cool way to search/grep files, buffers
     use {
         'nvim-telescope/telescope-fzf-native.nvim',
