@@ -18,5 +18,8 @@ tree.setup({
                 enable = false
             }
         }
-    }
+    },
+    view = {
+      width = 50,
+    },
 })
