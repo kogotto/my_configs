@@ -18,4 +18,4 @@ alias mux='tmuxinator'
 # Do not forget install keychain package
 alias prepare-ssh-keys='eval $(keychain -q --eval id_rsa)'
 
-alias cd-cmake-modules='/usr/share/cmake-3.22/Modules'
+alias cd-cmake-modules='cd /usr/share/cmake-3.22/Modules'
