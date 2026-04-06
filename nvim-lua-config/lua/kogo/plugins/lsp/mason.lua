@@ -22,5 +22,6 @@ masonLspConfig.setup({
         'clangd',   -- C/C++ language server
         'cmake',
         'pylsp',
+        'lua_ls',
     }
 })

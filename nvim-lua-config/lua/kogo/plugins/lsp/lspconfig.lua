@@ -1,4 +1,6 @@
 
+vim.lsp.enable("lua_ls")
+
 local lspConfigStatus, lspConfig = pcall(require, 'lspconfig')
 if not lspConfigStatus then
     print('Error: It seems that lspconfig is not installed')
