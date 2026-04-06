@@ -19,7 +19,10 @@ tree.setup({
             }
         }
     },
+    filters = {
+        git_ignored = false,
+    },
     view = {
-      width = 50,
+        width = 50,
     },
 })
