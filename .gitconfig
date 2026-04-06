@@ -9,6 +9,7 @@
 # Pretty log
 	hist = log --oneline --graph --decorate
 	h = hist master..HEAD
+	dm = diff master..HEAD
 	hf = hist -10
 	my = log --author='Yakov'
 	last = log -1
