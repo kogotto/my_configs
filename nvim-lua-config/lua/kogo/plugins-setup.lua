@@ -34,6 +34,21 @@ return packer.startup(function(use)
 
     -- Colorscheme
     use('morhetz/gruvbox')
+    use('datsfilipe/vesper.nvim')
+    use('datsfilipe/min-theme.nvim')
+    use('wurli/cobalt.nvim')
+    use('yonatan-perel/lake-dweller.nvim')
+    use('serhez/teide.nvim')
+    use('tomasiser/vim-code-dark')
+    use('AlexvZyl/nordic.nvim')
+    use('shaunsingh/nord.nvim')
+    use('rose-pine/neovim')
+    use('frenzyexists/aquarium-vim')
+    use('EdenEast/nightfox.nvim')
+    use('Everblush/nvim')
+    use('rebelot/kanagawa.nvim')
+    use('lewpoly/sherbet.nvim')
+    use('mellow-theme/mellow.nvim')
 
     -- Tree explorer
     use('nvim-tree/nvim-tree.lua')
