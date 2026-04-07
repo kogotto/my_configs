@@ -8,8 +8,10 @@
 [alias]
 # Pretty log
 	hist = log --oneline --graph --decorate
-	h = hist master..HEAD
-	dm = diff master..HEAD
+	; h = hist master..HEAD
+	h = hist main..HEAD
+	; dm = diff master..HEAD
+	dm = diff main..HEAD
 	hf = hist -10
 	my = log --author='Yakov'
 	last = log -1
