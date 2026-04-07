@@ -85,6 +85,9 @@ return packer.startup(function(use)
     -- auto pairs
     use('m4xshen/autoclose.nvim')
 
+    -- smooth scrolling
+    use('declancm/cinnamon.nvim')
+
     -- Autocompletion
     use('hrsh7th/nvim-cmp')              -- Autocompletion engine
 
