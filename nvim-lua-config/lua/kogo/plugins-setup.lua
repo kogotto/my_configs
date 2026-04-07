@@ -82,6 +82,9 @@ return packer.startup(function(use)
     -- git integration
     use('tpope/vim-fugitive')
 
+    -- auto pairs
+    use('m4xshen/autoclose.nvim')
+
     -- Autocompletion
     use('hrsh7th/nvim-cmp')              -- Autocompletion engine
 
