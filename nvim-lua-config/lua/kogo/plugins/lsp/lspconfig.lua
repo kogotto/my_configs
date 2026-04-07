@@ -28,3 +28,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
         keymap.set('n', '<leader>lo', '<cmd>Lspsaga outline<CR>', opts)
     end
 })
+
+local cmpNvimLspStatus, cmpNvimLsp = pcall(require, 'cmp_nvim_lsp')
+if not cmpNvimLspStatus then
+    print('Error: It seems that cmp-nvim-lsp is not installed')
+    print(cmpNvimLsp)
+    return
+end
+
+local capabilities = cmpNvimLsp.default_capabilities()
+
+vim.lsp.config("*", {
+    capabilities = capabilities,
+})
