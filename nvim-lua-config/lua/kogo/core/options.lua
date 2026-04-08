@@ -6,6 +6,9 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
+-- Persistent undo history
+opt.undofile = true
+
 -- Tabs and indentation
 opt.tabstop = 4
 opt.softtabstop = 4
