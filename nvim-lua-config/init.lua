@@ -14,6 +14,7 @@ require("kogo.plugins.nvim-cmp")
 require("kogo.plugins.autoclose")
 require("kogo.plugins.cinnamon")
 require("kogo.plugins.auto-session")
+require("kogo.plugins.indent-blankline")
 
 require("kogo.plugins.lsp.mason")
 require("kogo.plugins.lsp.lspsaga")

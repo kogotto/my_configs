@@ -91,6 +91,9 @@ return packer.startup(function(use)
     -- Restore sessions on startup
     use('rmagatti/auto-session')
 
+    -- Indentation marks
+    use('lukas-reineke/indent-blankline.nvim')
+
     -- Autocompletion
     use('hrsh7th/nvim-cmp')              -- Autocompletion engine
 
