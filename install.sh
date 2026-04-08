@@ -8,6 +8,7 @@ mkdir -p ~/.config/nvim
 ln -s $(realpath nvim-lua-config/init.lua) ~/.config/nvim/
 ln -s $(realpath nvim-lua-config/lua) ~/.config/nvim/
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s $(realpath .tmux.conf) ~/
 
 ./kin kin
