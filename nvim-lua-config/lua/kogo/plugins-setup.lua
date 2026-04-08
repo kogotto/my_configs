@@ -88,6 +88,9 @@ return packer.startup(function(use)
     -- smooth scrolling
     use('declancm/cinnamon.nvim')
 
+    -- Restore sessions on startup
+    use('rmagatti/auto-session')
+
     -- Autocompletion
     use('hrsh7th/nvim-cmp')              -- Autocompletion engine
 

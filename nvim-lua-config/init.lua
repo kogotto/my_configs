@@ -13,6 +13,7 @@ require("kogo.plugins.treesitter")
 require("kogo.plugins.nvim-cmp")
 require("kogo.plugins.autoclose")
 require("kogo.plugins.cinnamon")
+require("kogo.plugins.auto-session")
 
 require("kogo.plugins.lsp.mason")
 require("kogo.plugins.lsp.lspsaga")
