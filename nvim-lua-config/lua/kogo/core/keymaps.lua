@@ -64,5 +64,5 @@ keymap.set('n', '<leader>pG', telescopeBuiltin.live_grep, {})
 keymap.set('n', '<leader>pr', telescopeBuiltin.lsp_references, {})
 keymap.set('n', '<leader>pb', telescopeBuiltin.buffers, {})
 keymap.set('n', '<leader>ph', telescopeBuiltin.help_tags, {})
+keymap.set('n', '<leader>pm', function() telescopeBuiltin.man_pages({sections = {"ALL"}}) end, {})
 keymap.set('n', '<leader>pc', function() telescopeBuiltin.colorscheme({enable_preview = true}) end, {})
-
