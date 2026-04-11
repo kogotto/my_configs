@@ -49,6 +49,7 @@ return packer.startup(function(use)
     use('rebelot/kanagawa.nvim')
     use('lewpoly/sherbet.nvim')
     use('mellow-theme/mellow.nvim')
+    use('Mofiqul/dracula.nvim')
 
     -- Tree explorer
     use('nvim-tree/nvim-tree.lua')
