@@ -1,6 +1,11 @@
 
 local telescopeBuiltinStatus, telescopeBuiltin = pcall(require, 'telescope.builtin')
 
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('clangd')
+vim.lsp.enable('pylsp')
+vim.lsp.enable('cmake')
+
 local keymap = vim.keymap
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspConfig", {}),
