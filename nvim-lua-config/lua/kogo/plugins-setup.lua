@@ -108,6 +108,7 @@ return packer.startup(function(use)
     -- Lsp servers manager
     use('williamboman/mason.nvim', {run = function() pcall(vim.cmd, 'MasonUpdate') end})
     use('williamboman/mason-lspconfig.nvim')
+    use('WhoIsSethDaniel/mason-tool-installer.nvim')
 
     -- Configuring lsp servers
     use('neovim/nvim-lspconfig')
@@ -117,6 +118,14 @@ return packer.startup(function(use)
         branch = 'main'
     })
     use('onsails/lspkind.nvim')         -- add devicons to lsp
+
+    use('mfussenegger/nvim-dap')
+    use {
+        'jay-babu/mason-nvim-dap.nvim',
+        requires = {
+            {'mfussenegger/nvim-dap'}
+        }
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
