@@ -67,7 +67,7 @@ return packer.startup(function(use)
         run = 'make'
     }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        'nvim-telescope/telescope.nvim', tag = 'v0.2.2',
         requires = {
             {'nvim-lua/plenary.nvim'}
         }
@@ -108,6 +108,7 @@ return packer.startup(function(use)
     -- Lsp servers manager
     use('williamboman/mason.nvim', {run = function() pcall(vim.cmd, 'MasonUpdate') end})
     use('williamboman/mason-lspconfig.nvim')
+    use('WhoIsSethDaniel/mason-tool-installer.nvim')
 
     -- Configuring lsp servers
     use('neovim/nvim-lspconfig')
@@ -117,6 +118,20 @@ return packer.startup(function(use)
         branch = 'main'
     })
     use('onsails/lspkind.nvim')         -- add devicons to lsp
+
+    use('mfussenegger/nvim-dap')
+    use {
+        'jay-babu/mason-nvim-dap.nvim',
+        requires = {
+            {'mfussenegger/nvim-dap'}
+        }
+    }
+    use {
+        'rcarriga/nvim-dap-ui',
+        requires = {
+            {'nvim-neotest/nvim-nio'}
+        }
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

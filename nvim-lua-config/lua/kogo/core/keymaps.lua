@@ -66,3 +66,12 @@ keymap.set('n', '<leader>pb', telescopeBuiltin.buffers, {})
 keymap.set('n', '<leader>ph', telescopeBuiltin.help_tags, {})
 keymap.set('n', '<leader>pm', function() telescopeBuiltin.man_pages({sections = {"ALL"}}) end, {})
 keymap.set('n', '<leader>pc', function() telescopeBuiltin.colorscheme({enable_preview = true}) end, {})
+
+---- Dap
+keymap.set('n', '<leader>db', "<cmd> DapToggleBreakpoint <CR>", {})
+keymap.set('n', '<leader>dr', "<cmd> DapContinue <CR>", {})
+keymap.set('n', '<C-Up>', "<cmd> DapStepOut <CR>", {})
+keymap.set('n', '<C-Right>', "<cmd> DapStepOver <CR>", {})
+keymap.set('n', '<C-Down>', "<cmd> DapStepInto <CR>", {})
+keymap.set('n', '<C-Left>', "<cmd> DapContinue <CR>", {})
+keymap.set('n', '<C-x>', "<cmd> DapTerminate <CR>", {})
