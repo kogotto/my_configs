@@ -18,5 +18,6 @@ require("kogo.plugins.indent-blankline")
 
 require("kogo.plugins.lsp.mason")
 require("kogo.plugins.lsp.mason-nvim-dap")
+require("kogo.plugins.lsp.nvim-dap-ui")
 require("kogo.plugins.lsp.lspsaga")
 require("kogo.plugins.lsp.lspconfig")

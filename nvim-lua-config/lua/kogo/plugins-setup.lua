@@ -126,6 +126,12 @@ return packer.startup(function(use)
             {'mfussenegger/nvim-dap'}
         }
     }
+    use {
+        'rcarriga/nvim-dap-ui',
+        requires = {
+            {'nvim-neotest/nvim-nio'}
+        }
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
