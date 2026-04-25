@@ -14,10 +14,10 @@ if not dapUiStatus then
 end
 
 dapUi.setup()
-dap.listeners.after.event_iitialized["dapui_config"] = function ()
+dap.listeners.after.event_initialized["dapui_config"] = function ()
     dapUi.open()
 end
-dap.listeners.before.event_iitialized["dapui_config"] = function ()
+dap.listeners.before.event_initialized["dapui_config"] = function ()
     dapUi.close()
 end
 dap.listeners.before.event_exited["dapui_config"] = function ()
