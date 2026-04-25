@@ -67,7 +67,7 @@ return packer.startup(function(use)
         run = 'make'
     }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        'nvim-telescope/telescope.nvim', tag = 'v0.2.2',
         requires = {
             {'nvim-lua/plenary.nvim'}
         }
