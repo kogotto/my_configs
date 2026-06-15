@@ -5,6 +5,10 @@ vim.lsp.enable('lua_ls')
 vim.lsp.enable('clangd')
 vim.lsp.enable('pylsp')
 vim.lsp.enable('cmake')
+vim.lsp.enable('html')
+vim.lsp.enable('cssls')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('jsonls')
 
 local keymap = vim.keymap
 vim.api.nvim_create_autocmd("LspAttach", {
