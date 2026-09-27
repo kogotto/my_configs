@@ -28,8 +28,8 @@ masonLspConfig.setup({
     ensure_installed = {
         'clangd',   -- C/C++ language server
         'cmake',
-        'pylsp',
         'lua_ls',
+        'pyright',
     }
 })
 
