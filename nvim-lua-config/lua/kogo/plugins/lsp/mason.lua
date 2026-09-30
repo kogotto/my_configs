@@ -30,6 +30,7 @@ masonLspConfig.setup({
         'cmake',
         'lua_ls',
         'pyright',
+        'ruff',
     }
 })
 
