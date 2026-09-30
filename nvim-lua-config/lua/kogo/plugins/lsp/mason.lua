@@ -21,7 +21,6 @@ if not masonToolInstallerStatus then
 end
 
 mason.setup({
-    log_level = vim.log.levels.DEBUG,
 })
 
 masonLspConfig.setup({
