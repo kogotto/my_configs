@@ -5,20 +5,26 @@ local function setupLsp()
     vim.lsp.enable('pyright')
     vim.lsp.enable('ruff')
 
-    vim.lsp.config.pyright = {
-        settings = {
-            python = {
-                analysis = {
-                    typeCheckingMode = 'off',
+    vim.lsp.config(
+        'pyright',
+        {
+            settings = {
+                python = {
+                    analysis = {
+                        typeCheckingMode = 'off',
+                    }
                 }
             }
         }
-    }
+    )
 
 
-    vim.lsp.config("*", {
-        capabilities = require('cmp_nvim_lsp').default_capabilities(),
-    })
+    vim.lsp.config(
+        '*',
+        {
+            capabilities = require('cmp_nvim_lsp').default_capabilities(),
+        }
+    )
 
     local keymap = vim.keymap
     vim.api.nvim_create_autocmd("LspAttach", {
