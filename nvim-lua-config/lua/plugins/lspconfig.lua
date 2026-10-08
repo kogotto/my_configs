@@ -15,6 +15,11 @@ local function setupLsp()
         }
     }
 
+
+    vim.lsp.config("*", {
+        capabilities = require('cmp_nvim_lsp').default_capabilities(),
+    })
+
     local keymap = vim.keymap
     vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UsetLspConfig", {}),
@@ -45,6 +50,7 @@ return {
     dependencies = {
         'williamboman/mason-lspconfig.nvim',
         'glepnir/lspsaga.nvim',
+        'hrsh7th/cmp-nvim-lsp',
     },
-    config = setupLsp(),
+    config = setupLsp,
 }
