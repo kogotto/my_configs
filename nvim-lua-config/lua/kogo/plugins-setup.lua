@@ -30,36 +30,36 @@ end
 
 return packer.startup(function(use)
     -- Plugin manager
-    use 'wbthomason/packer.nvim'
+    -- use 'wbthomason/packer.nvim'
 
     -- Colorscheme
-    use('morhetz/gruvbox')
-    use('datsfilipe/vesper.nvim')
-    use('datsfilipe/min-theme.nvim')
-    use('wurli/cobalt.nvim')
-    use('yonatan-perel/lake-dweller.nvim')
-    use('serhez/teide.nvim')
-    use('tomasiser/vim-code-dark')
-    use('AlexvZyl/nordic.nvim')
-    use('shaunsingh/nord.nvim')
-    use('rose-pine/neovim')
-    use('frenzyexists/aquarium-vim')
-    use('EdenEast/nightfox.nvim')
-    use('Everblush/nvim')
-    use('rebelot/kanagawa.nvim')
-    use('lewpoly/sherbet.nvim')
-    use('mellow-theme/mellow.nvim')
-    use('Mofiqul/dracula.nvim')
-
+    -- use('morhetz/gruvbox')
+    -- use('datsfilipe/vesper.nvim')
+    -- use('datsfilipe/min-theme.nvim')
+    -- use('wurli/cobalt.nvim')
+    -- use('yonatan-perel/lake-dweller.nvim')
+    -- use('serhez/teide.nvim')
+    -- use('tomasiser/vim-code-dark')
+    -- use('AlexvZyl/nordic.nvim')
+    -- use('shaunsingh/nord.nvim')
+    -- use('rose-pine/neovim')
+    -- use('frenzyexists/aquarium-vim')
+    -- use('EdenEast/nightfox.nvim')
+    -- use('Everblush/nvim')
+    -- use('rebelot/kanagawa.nvim')
+    -- use('lewpoly/sherbet.nvim')
+    -- use('mellow-theme/mellow.nvim')
+    -- use('Mofiqul/dracula.nvim')
+    --
     -- Tree explorer
-    use('nvim-tree/nvim-tree.lua')
-    use('nvim-tree/nvim-web-devicons') -- Cool icons for filetypes in tree
+    -- use('nvim-tree/nvim-tree.lua')
+    -- use('nvim-tree/nvim-web-devicons') -- Cool icons for filetypes in tree
 
     -- Cool statusline
-    use('nvim-lualine/lualine.nvim')
+    -- use('nvim-lualine/lualine.nvim')
 
     -- Cool tabline
-    use('crispgm/nvim-tabline')
+    -- use('crispgm/nvim-tabline')
 
     -- Cool way to search/grep files, buffers
     use {
@@ -77,23 +77,23 @@ return packer.startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     -- Easy commet out
-    use('tpope/vim-commentary')
+    -- use('tpope/vim-commentary')
     -- Easy surroundings
-    use('tpope/vim-surround')
+    -- use('tpope/vim-surround')
     -- git integration
-    use('tpope/vim-fugitive')
+    -- use('tpope/vim-fugitive')
 
     -- auto pairs
-    use('m4xshen/autoclose.nvim')
+    -- use('m4xshen/autoclose.nvim')
 
     -- smooth scrolling
-    use('declancm/cinnamon.nvim')
+    -- use('declancm/cinnamon.nvim')
 
     -- Restore sessions on startup
-    use('rmagatti/auto-session')
+    -- use('rmagatti/auto-session')
 
     -- Indentation marks
-    use('lukas-reineke/indent-blankline.nvim')
+    -- use('lukas-reineke/indent-blankline.nvim')
 
     -- Autocompletion
     use('hrsh7th/nvim-cmp')              -- Autocompletion engine
@@ -106,9 +106,9 @@ return packer.startup(function(use)
     use('hrsh7th/cmp-buffer')            -- nvim-cmp source for words from open files
 
     -- Lsp servers manager
-    use('williamboman/mason.nvim', {run = function() pcall(vim.cmd, 'MasonUpdate') end})
-    use('williamboman/mason-lspconfig.nvim')
-    use('WhoIsSethDaniel/mason-tool-installer.nvim')
+    -- use('williamboman/mason.nvim', {run = function() pcall(vim.cmd, 'MasonUpdate') end})
+    -- use('williamboman/mason-lspconfig.nvim')
+    -- use('WhoIsSethDaniel/mason-tool-installer.nvim')
 
     -- Configuring lsp servers
     use('neovim/nvim-lspconfig')
@@ -119,19 +119,19 @@ return packer.startup(function(use)
     })
     use('onsails/lspkind.nvim')         -- add devicons to lsp
 
-    use('mfussenegger/nvim-dap')
-    use {
-        'jay-babu/mason-nvim-dap.nvim',
-        requires = {
-            {'mfussenegger/nvim-dap'}
-        }
-    }
-    use {
-        'rcarriga/nvim-dap-ui',
-        requires = {
-            {'nvim-neotest/nvim-nio'}
-        }
-    }
+    -- use('mfussenegger/nvim-dap')
+    -- use {
+    --     'jay-babu/mason-nvim-dap.nvim',
+    --     requires = {
+    --         {'mfussenegger/nvim-dap'}
+    --     }
+    -- }
+    -- use {
+    --     'rcarriga/nvim-dap-ui',
+    --     requires = {
+    --         {'nvim-neotest/nvim-nio'}
+    --     }
+    -- }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
