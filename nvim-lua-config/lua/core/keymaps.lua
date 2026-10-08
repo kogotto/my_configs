@@ -54,19 +54,7 @@ keymap.set("n", "<leader>9", "9gt")
 ---- Nvim-tree
 keymap.set('n', '<leader>o', ':NvimTreeToggle<CR>')
 keymap.set('n', '<leader>j', '<cmd>NvimTreeFindFile!<CR>')
---
--- ---- Telescope
--- local telescopeBuiltin = require('telescope.builtin')
--- keymap.set('n', '<leader>pf', telescopeBuiltin.find_files, {})
--- keymap.set('n', '<C-p>', telescopeBuiltin.git_files, {})
--- keymap.set('n', '<leader>pg', telescopeBuiltin.grep_string, {})
--- keymap.set('n', '<leader>pG', telescopeBuiltin.live_grep, {})
--- keymap.set('n', '<leader>pr', telescopeBuiltin.lsp_references, {})
--- keymap.set('n', '<leader>pb', telescopeBuiltin.buffers, {})
--- keymap.set('n', '<leader>ph', telescopeBuiltin.help_tags, {})
--- keymap.set('n', '<leader>pm', function() telescopeBuiltin.man_pages({sections = {"ALL"}}) end, {})
--- keymap.set('n', '<leader>pc', function() telescopeBuiltin.colorscheme({enable_preview = true}) end, {})
--- --
+
 -- -- ---- Dap
 -- -- keymap.set('n', '<leader>db', "<cmd> DapToggleBreakpoint <CR>", {})
 -- -- keymap.set('n', '<leader>dr', "<cmd> DapContinue <CR>", {})

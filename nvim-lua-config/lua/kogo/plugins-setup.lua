@@ -62,16 +62,16 @@ return packer.startup(function(use)
     -- use('crispgm/nvim-tabline')
 
     -- Cool way to search/grep files, buffers
-    use {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        run = 'make'
-    }
-    use {
-        'nvim-telescope/telescope.nvim', tag = 'v0.2.2',
-        requires = {
-            {'nvim-lua/plenary.nvim'}
-        }
-    }
+    -- use {
+    --     'nvim-telescope/telescope-fzf-native.nvim',
+    --     run = 'make'
+    -- }
+    -- use {
+    --     'nvim-telescope/telescope.nvim', tag = 'v0.2.2',
+    --     requires = {
+    --         {'nvim-lua/plenary.nvim'}
+    --     }
+    -- }
 
     -- Code highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
