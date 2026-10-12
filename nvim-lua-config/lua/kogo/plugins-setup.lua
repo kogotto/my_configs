@@ -74,7 +74,7 @@ return packer.startup(function(use)
     -- }
 
     -- Code highlighting
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    -- use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     -- Easy commet out
     -- use('tpope/vim-commentary')
@@ -98,10 +98,10 @@ return packer.startup(function(use)
     -- Autocompletion
     -- use('hrsh7th/nvim-cmp')              -- Autocompletion engine
 
-    use('L3MON4D3/LuaSnip')              -- Snippet engine
-    use('saadparwaiz1/cmp_luasnip')      -- nvim-cmp source for engine above
-    use('rafamadriz/friendly-snippets')  -- Snippet collection
-
+    -- use('L3MON4D3/LuaSnip')              -- Snippet engine
+    -- use('saadparwaiz1/cmp_luasnip')      -- nvim-cmp source for engine above
+    -- use('rafamadriz/friendly-snippets')  -- Snippet collection
+    --
     -- use('hrsh7th/cmp-path')              -- nvim-cmp source for filepaths
     -- use('hrsh7th/cmp-buffer')            -- nvim-cmp source for words from open files
     --
@@ -117,7 +117,7 @@ return packer.startup(function(use)
     --     'glepnir/lspsaga.nvim',
     --     branch = 'main'
     -- })
-    use('onsails/lspkind.nvim')         -- add devicons to lsp
+    -- use('onsails/lspkind.nvim')         -- add devicons to lsp
 
     -- use('mfussenegger/nvim-dap')
     -- use {
