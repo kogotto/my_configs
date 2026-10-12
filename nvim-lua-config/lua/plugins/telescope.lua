@@ -44,8 +44,9 @@ return {
 
         local keymap = vim.keymap
         local telescopeBuiltin = require('telescope.builtin')
-        keymap.set('n', '<leader>pf', telescopeBuiltin.find_files, {})
+        keymap.set('n', '<leader>pF', telescopeBuiltin.find_files, {})
         keymap.set('n', '<C-p>', telescopeBuiltin.git_files, {})
+        keymap.set('n', '<leader>pf', telescopeBuiltin.current_buffer_fuzzy_find, {})
         keymap.set('n', '<leader>pg', telescopeBuiltin.grep_string, {})
         keymap.set('n', '<leader>pG', telescopeBuiltin.live_grep, {})
         keymap.set('n', '<leader>pr', telescopeBuiltin.lsp_references, {})
