@@ -30,12 +30,6 @@ require("lazy").setup({
         -- import your plugins
         { import = "plugins" },
         {
-            'Mofiqul/dracula.nvim',
-            lazy = false,
-            priority = 1000,
-            config = function() require('core.colorscheme') end,
-        },
-        {
             "nvim-tree/nvim-tree.lua",
             dependencies = { "nvim-tree/nvim-web-devicons" },
             config = function() require("kogo.plugins.nvim-tree") end,
@@ -43,7 +37,7 @@ require("lazy").setup({
         {
             'nvim-treesitter/nvim-treesitter',
             -- Обязательно переключаемся на ветку main
-            branch = "main", 
+            branch = "main",
             lazy = false,
             build = ":TSUpdate",
             config = function()
