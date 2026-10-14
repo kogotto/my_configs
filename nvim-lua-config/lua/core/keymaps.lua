@@ -45,14 +45,3 @@ keymap.set("n", "<leader>6", "6gt")
 keymap.set("n", "<leader>7", "7gt")
 keymap.set("n", "<leader>8", "8gt")
 keymap.set("n", "<leader>9", "9gt")
-
--- Plugins
-
--- -- ---- Dap
--- -- keymap.set('n', '<leader>db', "<cmd> DapToggleBreakpoint <CR>", {})
--- -- keymap.set('n', '<leader>dr', "<cmd> DapContinue <CR>", {})
--- -- keymap.set('n', '<C-Up>', "<cmd> DapStepOut <CR>", {})
--- -- keymap.set('n', '<C-Right>', "<cmd> DapStepOver <CR>", {})
--- -- keymap.set('n', '<C-Down>', "<cmd> DapStepInto <CR>", {})
--- -- keymap.set('n', '<C-Left>', "<cmd> DapContinue <CR>", {})
--- -- keymap.set('n', '<C-x>', "<cmd> DapTerminate <CR>", {})
