@@ -1,3 +1,9 @@
+local function switchInlayHints()
+    vim.lsp.inlay_hint.enable(
+        not vim.lsp.inlay_hint.is_enabled()
+    )
+end
+
 local function setupLsp()
     vim.lsp.enable('clangd')
     vim.lsp.enable('cmake')
@@ -26,6 +32,8 @@ local function setupLsp()
         }
     )
 
+    local telescope = require('telescope.builtin')
+
     local keymap = vim.keymap
     vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UsetLspConfig", {}),
@@ -35,10 +43,12 @@ local function setupLsp()
                 silent = true,
                 buffer = ev.buf,
             }
-            keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+            keymap.set('n', 'gd', vim.lsp.buf.declaration, opts)
             keymap.set('n', 'gD', '<cmd>Lspsaga peek_definition<CR>', opts)
-            keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-            keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+            keymap.set('n', 'gi', telescope.lsp_implementations, opts)
+            keymap.set('n', 'gr', telescope.lsp_references, opts)
+            keymap.set('n', 'gs', '<cmd>LspClangdSwitchSourceHeader<CR>', opts)
+            keymap.set('n', '<leader>gh', switchInlayHints, opts)
             keymap.set('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
             keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
             keymap.set('n', '<leader>D', '<cmd>Lspsaga show_line_diagnostics<CR>', opts)
@@ -57,6 +67,7 @@ return {
         'williamboman/mason-lspconfig.nvim',
         'glepnir/lspsaga.nvim',
         'hrsh7th/cmp-nvim-lsp',
+        'nvim-telescope/telescope.nvim',
     },
     config = setupLsp,
 }
