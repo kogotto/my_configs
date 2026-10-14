@@ -48,10 +48,6 @@ keymap.set("n", "<leader>9", "9gt")
 
 -- Plugins
 
----- Nvim-tree
-keymap.set('n', '<leader>o', ':NvimTreeToggle<CR>')
-keymap.set('n', '<leader>j', '<cmd>NvimTreeFindFile!<CR>')
-
 -- -- ---- Dap
 -- -- keymap.set('n', '<leader>db', "<cmd> DapToggleBreakpoint <CR>", {})
 -- -- keymap.set('n', '<leader>dr', "<cmd> DapContinue <CR>", {})

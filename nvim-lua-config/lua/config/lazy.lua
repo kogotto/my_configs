@@ -30,11 +30,6 @@ require("lazy").setup({
         -- import your plugins
         { import = "plugins" },
         {
-            "nvim-tree/nvim-tree.lua",
-            dependencies = { "nvim-tree/nvim-web-devicons" },
-            config = function() require("kogo.plugins.nvim-tree") end,
-        },
-        {
             'nvim-treesitter/nvim-treesitter',
             -- Обязательно переключаемся на ветку main
             branch = "main",
