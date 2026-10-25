@@ -27,9 +27,11 @@ opt.smartcase = true
 
 -- Cursor line
 opt.cursorline = true
+opt.scrolloff = 8
 
 -- Appearance
 opt.termguicolors = true
+opt.updatetime = 250
 opt.background = "dark"
 opt.signcolumn = "yes"
 opt.listchars = "tab:>-,trail:-" -- show tabs as >--- and trailing spaces as -
