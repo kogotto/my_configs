@@ -14,10 +14,7 @@ keymap.set("n", "N", "Nzzzv") -- the screen
 
 keymap.set("n", "x", '"_x') -- do not copy removed character
 
-keymap.set("n", "<leader>+", "<C-a>")
-keymap.set("n", "<leader>-", "<C-x>")
-
-keymap.set("n", "<leader>ax", ":! chmod +x %<CR>") -- make current file executable
+keymap.set("n", "<leader>x", ":! chmod +x %<CR>") -- make current file executable
 
 -- [s]plit windows
 keymap.set("n", "<leader>sv", "<C-w>v") -- [v]ertically
