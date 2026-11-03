@@ -32,4 +32,7 @@ require("lazy").setup({
     },
     -- automatically check for plugin updates
     checker = { enabled = false },
+    change_detection = {
+        enabled = false,
+    },
 })
