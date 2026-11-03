@@ -5,11 +5,16 @@ return {
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-nvim-lsp',
+
+        'onsails/lspkind.nvim',
     },
 
     config = function()
         -- Completion menu appearance
         vim.opt.completeopt = "menu,menuone,noselect"
+        vim.o.winborder = 'double'
+        local lspkind = require('lspkind')
+        lspkind.init({})
 
         local cmp = require('cmp')
         cmp.setup({
@@ -24,10 +29,29 @@ return {
                 ["<CR>"] = cmp.mapping.confirm({ select = false }),
             }),
             sources = cmp.config.sources({
+                { name = 'nvim_lsp'},
                 { name = 'path' },
                 { name = 'buffer' },
-                { name = 'nvim_lsp'},
             }),
+            experimental = {
+                ghost_text = true,
+            },
+            formatting = {
+                fields = {'abbr', 'icon', 'kind', 'menu'},
+                format = lspkind.cmp_format({
+                    maxwidth = {
+                        menu = 50,
+                        abbr = 50,
+                    },
+                    ellipsis_char = '...',
+                    show_labelDetails = true,
+                    menu = {
+                        nvim_lsp = '[LSP] ',
+                        buffer = '[Buf] ',
+                        path = '[Path] ',
+                    },
+                }),
+            },
         })
     end,
 }
