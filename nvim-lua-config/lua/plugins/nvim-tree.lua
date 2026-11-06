@@ -7,11 +7,12 @@ return {
         vim.g.loaded_netrwPlugin = 1
 
         require('nvim-tree').setup({
+            hijack_cursor = true,
             actions = {
                 open_file = {
                     quit_on_open = true,
                     window_picker = {
-                        enable = false
+                        enable = false,
                     }
                 }
             },
@@ -19,6 +20,14 @@ return {
                 git_ignored = false,
             },
             view = {
+                float = {
+                    enable = true,
+                    quit_on_focus_loss = true,
+                    open_win_config = {
+                        relative = 'editor',
+                        border = 'double',
+                    },
+                },
                 width = 50,
             },
 
