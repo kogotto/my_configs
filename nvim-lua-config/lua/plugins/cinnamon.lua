@@ -9,7 +9,7 @@ return {
             options = {
                 mode = 'window',
                 max_delta = {
-                    time = 300,
+                    time = 150,
                 },
             },
         })
