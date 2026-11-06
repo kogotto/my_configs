@@ -1,3 +1,20 @@
+local mode_icons = {
+    n = '󰋜', -- normal
+    i = '󰏫', -- insert
+    v = '󰈈', -- visual
+    V = '󰈈', -- visual line
+    ['\22'] = '󰈈', -- visual block (Ctrl-V)
+    c = '', -- command
+    R = '󰛔', -- replace
+    s = '󰒉', -- select
+    t = '', -- terminal
+}
+
+local function addIconToMode(str)
+    local icon = mode_icons[vim.fn.mode()] or ''
+    return icon .. ' ' .. str
+end
+
 return {
     'nvim-lualine/lualine.nvim',
     config = function()
@@ -13,7 +30,7 @@ return {
                 lualine_a = {
                     {
                         'mode',
-                        icon = '', -- Your favorite icon here
+                        fmt = addIconToMode,
                     },
                 },
                 lualine_b = {'branch', 'diff', 'diagnostics'},
