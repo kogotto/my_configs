@@ -42,3 +42,7 @@ keymap.set("n", "<leader>6", "6gt")
 keymap.set("n", "<leader>7", "7gt")
 keymap.set("n", "<leader>8", "8gt")
 keymap.set("n", "<leader>9", "9gt")
+
+local functions = require('core.functions')
+keymap.set('n', '<leader>ft', functions.printFiletype)
+keymap.set('n', '<leader>dab', functions.deleteAllHiddenBuffers)
