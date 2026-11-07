@@ -18,6 +18,7 @@ local function configTreesitterObjects()
         aa = '@parameter.outer',
         ia = '@parameter.inner',
         as = '@statement.outer',
+        ab = '@block.outer',
     }) do
         vim.keymap.set({'x', 'o'}, key, function()
             select.select_textobject(query, 'textobjects')
