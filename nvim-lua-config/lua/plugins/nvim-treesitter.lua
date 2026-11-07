@@ -1,14 +1,13 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     -- Обязательно переключаемся на ветку main
-    branch = "main",
+    branch = 'main',
     lazy = false,
-    build = ":TSUpdate",
+    build = ':TSUpdate',
     config = function()
         -- Теперь модуль импортируется напрямую, БЕЗ .configs
-        local ts = require("nvim-treesitter")
+        local ts = require('nvim-treesitter')
 
-        -- Установка парсеров теперь вызывается вручную через install()
         ts.install({
             'c',
             'cpp',
@@ -23,7 +22,7 @@ return {
         })
 
         -- Включение подсветки синтаксиса встроенными средствами Neovim 0.12+
-        vim.api.nvim_create_autocmd("FileType", {
+        vim.api.nvim_create_autocmd('FileType', {
             callback = function(ev)
                 local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
                 if not vim.treesitter.language.add(lang) then
