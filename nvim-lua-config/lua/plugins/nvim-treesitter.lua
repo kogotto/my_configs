@@ -10,14 +10,14 @@ return {
 
         -- Установка парсеров теперь вызывается вручную через install()
         ts.install({
-            "c",
-            "cpp",
-            "python",
-            "lua",
-            "vim",
-            "vimdoc",
-            "query",
-            "markdown",
+            'c',
+            'cpp',
+            'python',
+            'lua',
+            'vim',
+            'vimdoc',
+            'query',
+            'markdown',
         })
 
         -- Включение подсветки синтаксиса встроенными средствами Neovim 0.12+
