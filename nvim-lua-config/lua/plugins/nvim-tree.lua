@@ -18,6 +18,13 @@ local function getWindowConfig()
     }
 end
 
+local function toggleNvimTree()
+    local api = require('nvim-tree.api')
+    api.tree.toggle({
+        find_file = true,
+    })
+end
+
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -86,6 +93,6 @@ return {
         })
 
         vim.keymap.set('n', '<leader>o', ':NvimTreeToggle<CR>')
-        vim.keymap.set('n', '<leader>j', '<cmd>NvimTreeFindFile!<CR>')
+        vim.keymap.set('n', '<leader>j', toggleNvimTree)
     end,
 }
