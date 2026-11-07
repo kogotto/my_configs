@@ -33,8 +33,13 @@ return {
                     quit_on_open = true,
                     window_picker = {
                         enable = false,
-                    }
-                }
+                    },
+                },
+                file_popup = {
+                    open_win_config = {
+                        border = 'double',
+                    },
+                },
             },
             filters = {
                 git_ignored = false,
