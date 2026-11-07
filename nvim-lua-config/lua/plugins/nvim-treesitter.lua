@@ -12,11 +12,13 @@ return {
         ts.install({
             'c',
             'cpp',
+            'cmake',
             'python',
             'lua',
             'vim',
             'vimdoc',
             'query',
+            'bash',
             'markdown',
         })
 
