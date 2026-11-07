@@ -51,6 +51,33 @@ return {
                     open_win_config = getWindowConfig,
                 },
             },
+            modified = {
+                enable = true,
+                show_on_dirs = true,
+                show_on_open_dirs = true,
+            },
+            renderer = {
+                add_trailing = true,
+                group_empty = true,
+                highlight_git = 'all',
+                highlight_modified = 'all',
+                indent_width = 4,
+                indent_markers = {
+                    enable = true,
+                    inline_arrows = false,
+                },
+                icons = {
+                    git_placement = 'signcolumn',
+                    hidden_placement = 'after',
+                    modified_placement = 'right_align',
+                    show = {
+                        hidden = true,
+                    },
+                },
+                special_files = {
+                    'CMakeLists.txt',
+                },
+            },
         })
 
         vim.keymap.set('n', '<leader>o', ':NvimTreeToggle<CR>')
