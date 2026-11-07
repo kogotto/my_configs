@@ -56,6 +56,7 @@ return {
                 relativenumber = true,
                 centralize_selection = true,
                 width = {
+                    min = 50,
                 },
                 float = {
                     enable = true,
