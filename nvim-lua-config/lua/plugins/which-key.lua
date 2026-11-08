@@ -4,4 +4,7 @@ return {
     dependencies = {
         'nvim-mini/mini.icons',
     },
+    opts = {
+        preset = 'helix',
+    },
 }
