@@ -15,6 +15,11 @@ return {
         telescope.setup({
             defaults = {
                 winblend = 10,
+                layout_config = {
+                    width = 0.9,
+                    height = 0.85,
+                    preview_width = 0.65,
+                },
                 mappings = {
                     i = {
                         ['<C-p>'] = actions.cycle_history_prev,
@@ -38,7 +43,12 @@ return {
                         ['<M-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
                     },
                 }
-            }
+            },
+            pickers = {
+                find_files = {
+                    hidden = true,
+                },
+            },
         })
         telescope.load_extension("fzf")
 
@@ -48,7 +58,7 @@ return {
         keymap.set('n', '<C-p>', telescopeBuiltin.git_files, {})
         keymap.set('n', '<leader>pf', telescopeBuiltin.current_buffer_fuzzy_find, {})
         keymap.set('n', '<leader>pg', telescopeBuiltin.grep_string, {})
-        keymap.set('n', '<leader>pG', telescopeBuiltin.live_grep, {})
+        keymap.set('n', '<leader>pG', function() telescopeBuiltin.live_grep({additional_args = { '--hidden', }}) end, {})
         keymap.set('n', '<leader>pr', telescopeBuiltin.lsp_references, {})
         keymap.set('n', '<leader>pb', telescopeBuiltin.buffers, {})
         keymap.set('n', '<leader>ph', telescopeBuiltin.help_tags, {})
