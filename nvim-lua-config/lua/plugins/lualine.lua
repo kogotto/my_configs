@@ -51,7 +51,7 @@ return {
                         'tabs',
                         mode = 2, -- show nr and filename
                         path = 1, -- show relative path
-                        max_length = vim.o.columns,
+                        max_length = function() return vim.o.columns end
                     },
                 },
                 lualine_b = {},
