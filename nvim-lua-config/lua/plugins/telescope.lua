@@ -58,7 +58,7 @@ return {
         keymap.set('n', '<C-p>', telescopeBuiltin.git_files, {})
         keymap.set('n', '<leader>pf', telescopeBuiltin.current_buffer_fuzzy_find, {})
         keymap.set('n', '<leader>pg', telescopeBuiltin.grep_string, {})
-        keymap.set('n', '<leader>pG', telescopeBuiltin.live_grep, {})
+        keymap.set('n', '<leader>pG', function() telescopeBuiltin.live_grep({additional_args = { '--hidden', }}) end, {})
         keymap.set('n', '<leader>pr', telescopeBuiltin.lsp_references, {})
         keymap.set('n', '<leader>pb', telescopeBuiltin.buffers, {})
         keymap.set('n', '<leader>ph', telescopeBuiltin.help_tags, {})
