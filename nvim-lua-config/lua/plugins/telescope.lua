@@ -43,7 +43,12 @@ return {
                         ['<M-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
                     },
                 }
-            }
+            },
+            pickers = {
+                find_files = {
+                    hidden = true,
+                },
+            },
         })
         telescope.load_extension("fzf")
 
