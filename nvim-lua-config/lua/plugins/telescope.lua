@@ -15,6 +15,11 @@ return {
         telescope.setup({
             defaults = {
                 winblend = 10,
+                layout_config = {
+                    width = 0.9,
+                    height = 0.85,
+                    preview_width = 0.65,
+                },
                 mappings = {
                     i = {
                         ['<C-p>'] = actions.cycle_history_prev,
