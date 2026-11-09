@@ -33,9 +33,6 @@ return {
                 { name = 'path' },
                 { name = 'buffer' },
             }),
-            experimental = {
-                ghost_text = true,
-            },
             formatting = {
                 fields = {'abbr', 'icon', 'kind', 'menu'},
                 format = lspkind.cmp_format({
