@@ -27,32 +27,44 @@ M.printFiletype = function()
     print('filetype ' .. vim.bo.filetype)
 end
 
-local function highlightAndSetSearch(reg, format)
+local FORWARD = 'FORWARD'
+local BACKWARD = 'BACKWARD'
+
+local isForward = function(direction)
+    if direction == FORWARD then
+        return true
+    elseif direction == BACKWARD then
+        return false
+    else
+        error('Invalid direction: ' .. direction)
+    end
+end
+
+local function highlightAndSetSearch(format, direction)
     local word = vim.fn.expand('<cword>')
-    local escapedWord = vim.fn.escape(word, '\\/')
-    vim.fn.setreg(reg, string.format(format, escapedWord))
+    local escapedWord = vim.fn.escape(word, '\\/.*$^~[]')
+    vim.fn.setreg('/', string.format(format, escapedWord))
+    vim.v.searchforward = isForward(direction) and 1 or 0
     vim.opt.hlsearch = true
 end
 
-local FORWARD_REGISTER = '/'
-local BACKWARD_REGISTER = '?'
 local STRICT_FORMAT = '\\V\\<%s\\>'
 local WEAK_FORMAT = '\\V%s'
 
 M.justHightlightStrictForward = function()
-    highlightAndSetSearch(FORWARD_REGISTER, STRICT_FORMAT)
+    highlightAndSetSearch(STRICT_FORMAT, FORWARD)
 end
 
 M.justHightlightStrictBackward = function()
-    highlightAndSetSearch(BACKWARD_REGISTER, STRICT_FORMAT)
+    highlightAndSetSearch(STRICT_FORMAT, BACKWARD)
 end
 
 M.justHightlightWeakForward = function()
-    highlightAndSetSearch(FORWARD_REGISTER, WEAK_FORMAT)
+    highlightAndSetSearch(WEAK_FORMAT, FORWARD)
 end
 
 M.justHightlightWeakBackward = function()
-    highlightAndSetSearch(BACKWARD_REGISTER, WEAK_FORMAT)
+    highlightAndSetSearch(WEAK_FORMAT, BACKWARD)
 end
 
 return M
