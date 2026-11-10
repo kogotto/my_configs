@@ -14,9 +14,18 @@ return {
             },
         })
         -- set mappings after cinnamon setup because they not move cursor anywhere
-        vim.keymap.set("n", "*", "*N") -- just highlight word under cursor
-        vim.keymap.set("n", "#", "#N") -- do not jump to next
-        vim.keymap.set('n', 'g*', 'g*N')
-        vim.keymap.set('n', 'g#', 'g#N')
+        local functions = require('core.functions')
+        vim.keymap.set('n', '*', functions.justHightlightStrictForward,
+            { silent = true, desc = 'Highlight word without jumping and search forward' }
+        )
+        vim.keymap.set('n', '#', functions.justHightlightStrictBackward,
+            { silent = true, desc = 'Highlight word without jumping and search backward' }
+        )
+        vim.keymap.set('n', 'g*', functions.justHightlightWeakForward,
+            { silent = true, desc = 'Highlight word without jumping and search forward' }
+        )
+        vim.keymap.set('n', 'g#', functions.justHightlightWeakBackward,
+            { silent = true, desc = 'Highlight word without jumping and search backward' }
+        )
     end
 }
