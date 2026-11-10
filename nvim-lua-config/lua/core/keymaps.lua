@@ -9,6 +9,8 @@ keymap.set("i", "JJ", "<ESC>")
 keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- drop search highlight
 keymap.set("n", "*", "*N") -- just highlight word under cursor
 keymap.set("n", "#", "#N") -- do not jump to next
+keymap.set('n', 'g*', 'g*N')
+keymap.set('n', 'g#', 'g#N')
 keymap.set("n", "n", "nzzzv") -- keep found word at middle of
 keymap.set("n", "N", "Nzzzv") -- the screen
 

@@ -13,7 +13,7 @@ local function hasWindows(bufnr)
            atLeastOneWindow(bufnr)
 end
 
-local function deleteAllHiddenBuffers()
+M.deleteAllHiddenBuffers = function()
     local api = vim.api
     local buffers = api.nvim_list_bufs()
     for _, bufnr in ipairs(buffers) do
@@ -23,10 +23,36 @@ local function deleteAllHiddenBuffers()
     end
 end
 
-M.deleteAllHiddenBuffers = deleteAllHiddenBuffers
-
 M.printFiletype = function()
     print('filetype ' .. vim.bo.filetype)
+end
+
+local function highlightAndSetSearch(reg, format)
+    local word = vim.fn.expand('<cword>')
+    local escapedWord = vim.fn.escape(word, '\\/')
+    vim.fn.setreg(reg, string.format(format, escapedWord))
+    vim.opt.hlsearch = true
+end
+
+local FORWARD_REGISTER = '/'
+local BACKWARD_REGISTER = '?'
+local STRICT_FORMAT = '\\V\\<%s\\>'
+local WEAK_FORMAT = '\\V%s'
+
+M.justHightlightStrictForward = function()
+    highlightAndSetSearch(FORWARD_REGISTER, STRICT_FORMAT)
+end
+
+M.justHightlightStrictBackward = function()
+    highlightAndSetSearch(BACKWARD_REGISTER, STRICT_FORMAT)
+end
+
+M.justHightlightWeakForward = function()
+    highlightAndSetSearch(FORWARD_REGISTER, WEAK_FORMAT)
+end
+
+M.justHightlightWeakBackward = function()
+    highlightAndSetSearch(BACKWARD_REGISTER, WEAK_FORMAT)
 end
 
 return M
