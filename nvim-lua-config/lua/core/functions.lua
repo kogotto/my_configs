@@ -13,7 +13,7 @@ local function hasWindows(bufnr)
            atLeastOneWindow(bufnr)
 end
 
-local function deleteAllHiddenBuffers()
+M.deleteAllHiddenBuffers = function()
     local api = vim.api
     local buffers = api.nvim_list_bufs()
     for _, bufnr in ipairs(buffers) do
@@ -22,8 +22,6 @@ local function deleteAllHiddenBuffers()
         end
     end
 end
-
-M.deleteAllHiddenBuffers = deleteAllHiddenBuffers
 
 M.printFiletype = function()
     print('filetype ' .. vim.bo.filetype)
