@@ -56,3 +56,10 @@ opt.cmdheight = 1
 -- Files
 opt.swapfile = false -- Disable swap files since we have undo files and auto-session
 opt.autoread = true -- Automatically read files when changed outside of vim
+
+-- Auto indentation options
+-- :0 - no extra indentation for case labels in swith statements
+-- g0 - no extra indentation for 'public:', 'protected:' and 'private:' labels in C++ classes
+-- N-s - no extra indentation inside namespaces in C++ files
+-- (0 - no extra indentation for opening parentheses)
+opt.cinoptions = ':0,g0,N-s,(0,W4'
