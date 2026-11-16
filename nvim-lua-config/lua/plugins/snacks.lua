@@ -19,7 +19,10 @@ return {
         },
         dim = {
             enabled = true,
-        }
+        },
+        zen = {
+            enabled = true,
+        },
     },
     init = function()
         vim.api.nvim_create_autocmd('User', {
@@ -27,6 +30,8 @@ return {
             callback = function()
                 Snacks.toggle.dim():map('<leader>fd')
                 Snacks.toggle.inlay_hints():map('<leader>fh')
+                Snacks.toggle.zen():map('<leader>fZ')
+                Snacks.toggle.zoom():map('<leader>fz')
             end,
         })
     end,
