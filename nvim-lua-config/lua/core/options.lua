@@ -63,3 +63,5 @@ opt.autoread = true -- Automatically read files when changed outside of vim
 -- N-s - no extra indentation inside namespaces in C++ files
 -- (0 - no extra indentation for opening parentheses)
 opt.cinoptions = ':0,g0,N-s,(0,W4'
+
+opt.matchpairs:append('<:>') -- Make % match < and > in addition to the default pairs
