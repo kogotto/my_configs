@@ -34,7 +34,9 @@ opt.termguicolors = true
 opt.updatetime = 250
 opt.background = "dark"
 opt.signcolumn = "yes"
-opt.listchars = "tab:>-,trail:-" -- show tabs as >--- and trailing spaces as -
+-- show tabs as >--- and trailing spaces as -
+--      non-breaking-space as +, and show > and < for text that extends beyond the window
+opt.listchars = "tab:>-,trail:-,nbsp:+,extends:>,precedes:<"
 opt.list = true
 opt.colorcolumn = "80"
 
@@ -47,3 +49,29 @@ opt.clipboard:append("unnamedplus")
 -- Split windows
 opt.splitright = true
 opt.splitbelow = true
+
+opt.jumpoptions = 'view' -- Keep window view on jumps
+opt.pumheight = 12 -- Maximum number of items to show in the popup menu
+opt.showmode = false -- Do not show mode in command line since we have a statusline
+opt.cmdheight = 1
+
+-- Files
+opt.swapfile = false -- Disable swap files since we have undo files and auto-session
+opt.autoread = true -- Automatically read files when changed outside of vim
+
+-- Auto indentation options
+-- :0 - no extra indentation for case labels in swith statements
+-- g0 - no extra indentation for 'public:', 'protected:' and 'private:' labels in C++ classes
+-- N-s - no extra indentation inside namespaces in C++ files
+-- (0 - no extra indentation for opening parentheses)
+opt.cinoptions = ':0,g0,N-s,(0,W4'
+
+opt.matchpairs:append('<:>') -- Make % match < and > in addition to the default pairs
+
+-- Do not continue comments with 'o' or 'O'
+-- ftplugin overrides this on file open, so we need to set it again after ftplugin is loaded
+vim.api.nvim_create_autocmd('FileType', {
+    callback = function()
+        vim.opt_local.formatoptions:remove({'o'})
+    end
+})
