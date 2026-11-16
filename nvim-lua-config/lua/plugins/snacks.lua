@@ -6,7 +6,13 @@ return {
         words = {
             enabled = true,
             debounce = 0,
-        }
+            notify_jump = true,
+        },
+        notifier = {
+            enabled = true,
+            style = 'compact',
+            level = vim.log.levels.INFO,
+        },
     },
     keys = {
         -- words
