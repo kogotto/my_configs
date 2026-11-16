@@ -67,3 +67,11 @@ opt.autoread = true -- Automatically read files when changed outside of vim
 opt.cinoptions = ':0,g0,N-s,(0,W4'
 
 opt.matchpairs:append('<:>') -- Make % match < and > in addition to the default pairs
+
+-- Do not continue comments with 'o' or 'O'
+-- ftplugin overrides this on file open, so we need to set it again after ftplugin is loaded
+vim.api.nvim_create_autocmd('FileType', {
+    callback = function()
+        vim.opt_local.formatoptions:remove({'o'})
+    end
+})
