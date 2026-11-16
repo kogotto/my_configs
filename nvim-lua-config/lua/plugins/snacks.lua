@@ -3,6 +3,9 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
+        animate = {
+            enabled = true,
+        },
         words = {
             enabled = true,
             debounce = 0,
