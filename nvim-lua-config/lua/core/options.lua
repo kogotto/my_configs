@@ -52,3 +52,7 @@ opt.jumpoptions = 'view' -- Keep window view on jumps
 opt.pumheight = 12 -- Maximum number of items to show in the popup menu
 opt.showmode = false -- Do not show mode in command line since we have a statusline
 opt.cmdheight = 1
+
+-- Files
+opt.swapfile = false -- Disable swap files since we have undo files and auto-session
+opt.autoread = true -- Automatically read files when changed outside of vim
