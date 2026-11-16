@@ -1,9 +1,3 @@
-local function switchInlayHints()
-    vim.lsp.inlay_hint.enable(
-        not vim.lsp.inlay_hint.is_enabled()
-    )
-end
-
 local function setupLsp()
     vim.lsp.enable('clangd')
     vim.lsp.enable('cmake')
@@ -48,7 +42,6 @@ local function setupLsp()
             keymap.set('n', 'gi', telescope.lsp_implementations, opts)
             keymap.set('n', 'gr', telescope.lsp_references, opts)
             keymap.set('n', 'gs', '<cmd>LspClangdSwitchSourceHeader<CR>', opts)
-            keymap.set('n', '<leader>gh', switchInlayHints, opts)
             keymap.set('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
             keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
             keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts)

@@ -26,6 +26,7 @@ return {
             pattern = 'VeryLazy',
             callback = function()
                 Snacks.toggle.dim():map('<leader>fd')
+                Snacks.toggle.inlay_hints():map('<leader>fh')
             end,
         })
     end,
