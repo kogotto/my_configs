@@ -26,6 +26,15 @@ return {
         zen = {
             enabled = true,
         },
+        scroll = {
+            enabled = true,
+            animate = {
+                duration = {
+                    step = 15,
+                    total = 150,
+                },
+            },
+        },
     },
     init = function()
         vim.api.nvim_create_autocmd('User', {

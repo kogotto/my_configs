@@ -48,3 +48,15 @@ keymap.set("n", "<leader>9", "9gt")
 local functions = require('core.functions')
 keymap.set('n', '<leader>ft', functions.printFiletype)
 keymap.set('n', '<leader>dab', functions.deleteAllHiddenBuffers)
+keymap.set('n', '*', functions.justHightlightStrictForward,
+    { silent = true, desc = 'Highlight word without jumping and search forward' }
+)
+keymap.set('n', '#', functions.justHightlightStrictBackward,
+    { silent = true, desc = 'Highlight word without jumping and search backward' }
+)
+keymap.set('n', 'g*', functions.justHightlightWeakForward,
+    { silent = true, desc = 'Highlight word without jumping and search forward' }
+)
+keymap.set('n', 'g#', functions.justHightlightWeakBackward,
+    { silent = true, desc = 'Highlight word without jumping and search backward' }
+)
