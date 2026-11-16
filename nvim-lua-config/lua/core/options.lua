@@ -34,7 +34,9 @@ opt.termguicolors = true
 opt.updatetime = 250
 opt.background = "dark"
 opt.signcolumn = "yes"
-opt.listchars = "tab:>-,trail:-" -- show tabs as >--- and trailing spaces as -
+-- show tabs as >--- and trailing spaces as -
+--      non-breaking-space as +, and show > and < for text that extends beyond the window
+opt.listchars = "tab:>-,trail:-,nbsp:+,extends:>,precedes:<"
 opt.list = true
 opt.colorcolumn = "80"
 
