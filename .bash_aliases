@@ -10,6 +10,8 @@ alias cd='cd_ls'
 
 # I always type vim
 alias vim='nvim'
+# Profile vim startup time
+alias pvim='PROF=1 nvim'
 
 # Tmuxinator is too long for typing
 alias mux='tmuxinator'
