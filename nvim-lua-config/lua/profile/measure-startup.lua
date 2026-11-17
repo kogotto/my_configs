@@ -13,4 +13,3 @@ if vim.env.PROF then
         },
     })
 end
-print('mesure-startup started')
