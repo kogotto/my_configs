@@ -60,6 +60,7 @@ return {
         keymap.set('n', '<leader>pg', telescopeBuiltin.grep_string, {})
         keymap.set('n', '<leader>pG', function() telescopeBuiltin.live_grep({additional_args = { '--hidden', }}) end, {})
         keymap.set('n', '<leader>pr', telescopeBuiltin.lsp_references, {})
+        keymap.set('n', '<leader>pl', telescopeBuiltin.git_commits, {})
         keymap.set('n', '<leader>pb', telescopeBuiltin.buffers, {})
         keymap.set('n', '<leader>ph', telescopeBuiltin.help_tags, {})
         keymap.set('n', '<leader>pm', function() telescopeBuiltin.man_pages({sections = {"ALL"}}) end, {})
