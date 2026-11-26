@@ -37,6 +37,11 @@ return {
                         ['<CR>'] = actions.select_default,
                         ['<C-t>'] = actions.select_tab,
                         ['<C-v>'] = actions.select_vertical,
+
+                        ['jj'] = actions.close,
+                        ['jJ'] = actions.close,
+                        ['Jj'] = actions.close,
+                        ['JJ'] = actions.close,
                     },
                     n = {
                         ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
