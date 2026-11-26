@@ -9,21 +9,21 @@ return {
         require('mason').setup({})
         require('mason-lspconfig').setup({
             ensure_installed = {
-                'clangd',   -- C/C++ language server
+                'clangd',                -- C/C++ language server
                 'cmake',
 
-                'lua_ls',   -- Lua language server
+                'lua_ls',                -- Lua language server
 
-                'pyright',  -- Python type checker
-                'ruff',     -- Python linter and formatter
+                'pyright',               -- Python type checker
+                'ruff',                  -- Python linter and formatter
 
-                'html',     -- HTML language server
-                'cssls',    -- CSS language server
-                'ts_ls',    -- TypeScript/JavaScript language server
+                'html',                  -- HTML language server
+                'cssls',                 -- CSS language server
+                'ts_ls',                 -- TypeScript/JavaScript language server
                 'emmet_language_server', -- Emmet language server
-                'jsonls',   -- JSON language server
-                'yamlls',   -- YAML language server
-                'eslint',   -- ESLint linter
+                'jsonls',                -- JSON language server
+                'yamlls',                -- YAML language server
+                'eslint',                -- ESLint linter
             }
         })
     end,
