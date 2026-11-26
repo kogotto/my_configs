@@ -8,9 +8,11 @@ return {
             ensure_installed = {
                 'clangd',   -- C/C++ language server
                 'cmake',
-                'lua_ls',
-                'pyright',
-                'ruff',
+
+                'lua_ls',   -- Lua language server
+
+                'pyright',  -- Python type checker
+                'ruff',     -- Python linter and formatter
             }
         })
     end,
