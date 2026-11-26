@@ -23,6 +23,7 @@ return {
                 'emmet_language_server', -- Emmet language server
                 'jsonls',   -- JSON language server
                 'yamlls',   -- YAML language server
+                'eslint',   -- ESLint linter
             }
         })
     end,
