@@ -49,7 +49,6 @@ end
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
-        'williamboman/mason-lspconfig.nvim',
         'glepnir/lspsaga.nvim',
         'hrsh7th/cmp-nvim-lsp',
         'nvim-telescope/telescope.nvim',
