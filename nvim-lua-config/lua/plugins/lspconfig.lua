@@ -1,10 +1,4 @@
 local function setupLsp()
-    vim.lsp.enable('clangd')
-    vim.lsp.enable('cmake')
-    vim.lsp.enable('lua_ls')
-    vim.lsp.enable('pyright')
-    vim.lsp.enable('ruff')
-
     vim.lsp.config(
         'pyright',
         {
