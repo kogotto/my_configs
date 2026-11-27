@@ -25,6 +25,10 @@ local function setupLsp()
     vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(ev)
+            local toString = require('core.toString')
+            local notify = require('core.notify')
+            notify.debug('LspAttach with ev =\n%s', toString.table(ev))
+
             local opts = {
                 noremap = true,
                 silent = true,
