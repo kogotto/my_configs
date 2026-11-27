@@ -41,10 +41,10 @@ local function configTreesitterObjects()
 
     local swap = require('nvim-treesitter-textobjects.swap')
     vim.keymap.set('n', '<leader>a', function()
-        swap.swap_next("@parameter.inner")
+        swap.swap_next('@parameter.inner')
     end)
     vim.keymap.set('n', '<leader>A', function()
-        swap.swap_previous("@parameter.inner")
+        swap.swap_previous('@parameter.inner')
     end)
 end
 

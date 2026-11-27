@@ -26,8 +26,8 @@ local function toggleNvimTree()
 end
 
 return {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    'nvim-tree/nvim-tree.lua',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         -- Recomendation from documentation
         vim.g.loaded_netrw = 1

@@ -21,8 +21,8 @@ local function setupLsp()
 
     local telescope = require('telescope.builtin')
 
-    vim.api.nvim_create_autocmd("LspAttach", {
-        group = vim.api.nvim_create_augroup("KogoLspConfig", { clear = true, }),
+    vim.api.nvim_create_autocmd('LspAttach', {
+        group = vim.api.nvim_create_augroup('KogoLspConfig', { clear = true, }),
         callback = function(ev)
             local toString = require('core.toString')
             local notify = require('core.notify')

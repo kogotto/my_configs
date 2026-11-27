@@ -4,7 +4,7 @@ return {
         'mason-org/mason.nvim',
         'neovim/nvim-lspconfig',
     },
-    build = function() pcall(vim.cmd, "MasonUpdate") end,
+    build = function() pcall(vim.cmd, 'MasonUpdate') end,
     config = function()
         require('mason').setup({})
         require('mason-lspconfig').setup({

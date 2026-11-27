@@ -65,7 +65,7 @@ M.function_ = _functionToString
 
 M.table = function(value)
     if type(value) ~= 'table' then
-        return string.format("'not a table: %s'", _serialize(value))
+        error('Parameter not a table')
     end
     return _tableToStr(value, 0)
 end
