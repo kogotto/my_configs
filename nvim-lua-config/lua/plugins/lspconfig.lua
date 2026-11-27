@@ -23,7 +23,7 @@ local function setupLsp()
 
     local keymap = vim.keymap
     vim.api.nvim_create_autocmd("LspAttach", {
-        group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+        group = vim.api.nvim_create_augroup("KogoLspConfig", { clear = true, }),
         callback = function(ev)
             local toString = require('core.toString')
             local notify = require('core.notify')
