@@ -21,7 +21,6 @@ local function setupLsp()
 
     local telescope = require('telescope.builtin')
 
-    local keymap = vim.keymap
     vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("KogoLspConfig", { clear = true, }),
         callback = function(ev)
@@ -29,18 +28,7 @@ local function setupLsp()
             local notify = require('core.notify')
             notify.debug('LspAttach with ev =\n%s', toString.table(ev))
 
-            local opts = {
-                buffer = ev.buf,
-                silent = true,
-                remap = false,
-            }
-            local function setKeymap(modes, keys, action, description)
-                opts.desc = description or tostring(action)
-                local status, result = pcall(keymap.set, modes, keys, action, opts)
-                if not status then
-                    notify.warn('vim.keymap.set return an error: %s', result)
-                end
-            end
+            local setKeymap = require('core.keymap').buffer(ev.buf)
 
             setKeymap('n', 'gd', vim.lsp.buf.declaration,
                 'Go to declaration')
