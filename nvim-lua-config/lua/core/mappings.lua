@@ -1,11 +1,4 @@
-local opts = {
-    silent = true,
-    remap = false,
-}
-local function setKeymap(modes, keys, action, description)
-    opts.desc = description or tostring(action)
-    vim.keymap.set(modes, keys, action, opts)
-end
+local setKeymap = require('core.keymap').global()
 
 -- general
 local descriptionOfjj = 'Faster way to quit insert mode'
