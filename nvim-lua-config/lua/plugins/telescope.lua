@@ -57,18 +57,29 @@ return {
         })
         telescope.load_extension('fzf')
 
-        local keymap = vim.keymap
+        local setKeymap = require('core.keymap').global()
         local telescopeBuiltin = require('telescope.builtin')
-        keymap.set('n', '<leader>pF', telescopeBuiltin.find_files, {})
-        keymap.set('n', '<C-p>', telescopeBuiltin.git_files, {})
-        keymap.set('n', '<leader>pf', telescopeBuiltin.current_buffer_fuzzy_find, {})
-        keymap.set('n', '<leader>pg', telescopeBuiltin.grep_string, {})
-        keymap.set('n', '<leader>pG', function() telescopeBuiltin.live_grep({additional_args = { '--hidden', }}) end, {})
-        keymap.set('n', '<leader>pr', telescopeBuiltin.lsp_references, {})
-        keymap.set('n', '<leader>pl', telescopeBuiltin.git_commits, {})
-        keymap.set('n', '<leader>pb', telescopeBuiltin.buffers, {})
-        keymap.set('n', '<leader>ph', telescopeBuiltin.help_tags, {})
-        keymap.set('n', '<leader>pm', function() telescopeBuiltin.man_pages({sections = {'ALL'}}) end, {})
-        keymap.set('n', '<leader>pc', function() telescopeBuiltin.colorscheme({enable_preview = true}) end, {})
+        setKeymap('n', '<leader>pF', telescopeBuiltin.find_files,
+            'Find files in current directory')
+        setKeymap('n', '<C-p>', telescopeBuiltin.git_files,
+            'Find files under git control')
+        setKeymap('n', '<leader>pf', telescopeBuiltin.current_buffer_fuzzy_find,
+            'Fuzzy search in current buffer')
+        setKeymap('n', '<leader>pg', telescopeBuiltin.grep_string,
+            'grep word under cursor in current directory')
+        setKeymap('n', '<leader>pG', function() telescopeBuiltin.live_grep({additional_args = { '--hidden', }}) end,
+            'grep current directory as you type')
+        setKeymap('n', '<leader>pr', telescopeBuiltin.lsp_references,
+            'Search through references of symbol under cursor')
+        setKeymap('n', '<leader>pl', telescopeBuiltin.git_commits,
+            'git log -p in telescope')
+        setKeymap('n', '<leader>pb', telescopeBuiltin.buffers,
+            'Search through open buffers')
+        setKeymap('n', '<leader>ph', telescopeBuiltin.help_tags,
+            'Search through vim help files')
+        setKeymap('n', '<leader>pm', function() telescopeBuiltin.man_pages({sections = {'ALL'}}) end,
+            'Search through man pages')
+        setKeymap('n', '<leader>pc', function() telescopeBuiltin.colorscheme({enable_preview = true}) end,
+            'Show available colorschemes')
     end,
 }
