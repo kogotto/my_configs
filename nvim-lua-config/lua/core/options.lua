@@ -33,7 +33,7 @@ opt.scrolloff = 8
 opt.termguicolors = true
 opt.updatetime = 250
 opt.background = "dark"
-opt.signcolumn = "yes"
+opt.signcolumn = "yes:2"
 -- show tabs as >--- and trailing spaces as -
 --      non-breaking-space as +, and show > and < for text that extends beyond the window
 opt.listchars = "tab:>-,trail:-,nbsp:+,extends:>,precedes:<"
