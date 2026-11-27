@@ -1,62 +1,58 @@
-local keymap = vim.keymap
+local opts = {
+    silent = true,
+    remap = false,
+}
+local function setKeymap(modes, keys, action, description)
+    opts.desc = description or tostring(action)
+    vim.keymap.set(modes, keys, action, opts)
+end
 
 -- general
-keymap.set("i", "jj", "<ESC>")
-keymap.set("i", "jJ", "<ESC>")
-keymap.set("i", "Jj", "<ESC>")
-keymap.set("i", "JJ", "<ESC>")
+local descriptionOfjj = 'Faster way to quit insert mode'
+setKeymap("i", "jj", "<ESC>", descriptionOfjj)
+setKeymap("i", "jJ", "<ESC>", descriptionOfjj)
+setKeymap("i", "Jj", "<ESC>", descriptionOfjj)
+setKeymap("i", "JJ", "<ESC>", descriptionOfjj)
 
-keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- drop search highlight
-keymap.set("n", "*", "*N") -- just highlight word under cursor
-keymap.set("n", "#", "#N") -- do not jump to next
-keymap.set('n', 'g*', 'g*N')
-keymap.set('n', 'g#', 'g#N')
-keymap.set("n", "n", "nzzzv") -- keep found word at middle of
-keymap.set("n", "N", "Nzzzv") -- the screen
+setKeymap("n", "<leader>h", ":nohlsearch<CR>", 'Drop search highlight')
+local searchNextDescription = 'Keep found word at the center of the screan'
+setKeymap("n", "n", "nzzzv", searchNextDescription)
+setKeymap("n", "N", "Nzzzv", searchNextDescription)
 
-keymap.set("n", "x", '"_x') -- do not copy removed character
-
-keymap.set("n", "<leader>x", ":! chmod +x %<CR>") -- make current file executable
+setKeymap("n", "<leader>x", ":! chmod +x %<CR>", 'Make current file executable')
 
 -- [s]plit windows
-keymap.set("n", "<leader>sv", "<C-w>v") -- [v]ertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- [h]oriontally
-keymap.set("n", "<leader>se", "<C-w>=") -- make [e]qual splits size
-keymap.set("n", "<leader>sx", "<C-w>c") -- [c]lose split
-keymap.set("n", "<leader>so", "<C-w>o") -- close all splits, except for current
-keymap.set("n", "<leader><leader>", "<C-w><C-w>") -- next split
+setKeymap("n", "<leader>sv", "<C-w>v", 'Split vertically')
+setKeymap("n", "<leader>sh", "<C-w>s", 'Split horizontally')
+setKeymap("n", "<leader>se", "<C-w>=", 'Make splits equal in size')
+setKeymap("n", "<leader>sx", "<C-w>c", 'Kill current split')
+setKeymap("n", "<leader>so", "<C-w>o", 'Kill all other splits')
+setKeymap("n", "<leader><leader>", "<C-w><C-w>", 'Go to next split')
 
 -- [t]abs
-keymap.set("n", "<leader>tc", ":tabnew<CR>") -- [c]reate new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>to", ":tabonly<CR>") -- leave [o]nly current tab
-keymap.set("n", "<leader>tn", ":tabnext<CR>") -- [n]ext tab
-keymap.set("n", "<leader>tp", ":tabprev<CR>") -- [p]revious tab
-keymap.set("n", "<leader>tm", "<C-w>T") -- [m]ove current window to new tab
-keymap.set("n", "<leader>ty", "<C-w>s<C-w>T") -- clone current window in new tab
+setKeymap("n", "<leader>tc", ":tabnew<CR>", 'Create new tab')
+setKeymap("n", "<leader>tx", ":tabclose<CR>", 'Kill current tab')
+setKeymap("n", "<leader>to", ":tabonly<CR>", 'Kill all other tabs')
+setKeymap("n", "<leader>tn", ":tabnext<CR>", 'Go to next tab')
+setKeymap("n", "<leader>tp", ":tabprev<CR>", 'Go to previous tab')
+setKeymap("n", "<leader>tm", "<C-w>T", 'Move current window to new tab')
+setKeymap("n", "<leader>ty", "<C-w>s<C-w>T", 'Clone current window in new tab')
 -- go to 'n'th tab
-keymap.set("n", "<leader>1", "1gt")
-keymap.set("n", "<leader>2", "2gt")
-keymap.set("n", "<leader>3", "3gt")
-keymap.set("n", "<leader>4", "4gt")
-keymap.set("n", "<leader>5", "5gt")
-keymap.set("n", "<leader>6", "6gt")
-keymap.set("n", "<leader>7", "7gt")
-keymap.set("n", "<leader>8", "8gt")
-keymap.set("n", "<leader>9", "9gt")
+setKeymap("n", "<leader>1", "1gt", 'Go to tab 1')
+setKeymap("n", "<leader>2", "2gt", 'Go to tab 2')
+setKeymap("n", "<leader>3", "3gt", 'Go to tab 3')
+setKeymap("n", "<leader>4", "4gt", 'Go to tab 4')
+setKeymap("n", "<leader>5", "5gt", 'Go to tab 5')
+setKeymap("n", "<leader>6", "6gt", 'Go to tab 6')
+setKeymap("n", "<leader>7", "7gt", 'Go to tab 7')
+setKeymap("n", "<leader>8", "8gt", 'Go to tab 8')
+setKeymap("n", "<leader>9", "9gt", 'Go to tab 9')
 
 local functions = require('core.functions')
-keymap.set('n', '<leader>ft', functions.printFiletype)
-keymap.set('n', '<leader>dab', functions.deleteAllHiddenBuffers)
-keymap.set('n', '*', functions.justHightlightStrictForward,
-    { silent = true, desc = 'Highlight word without jumping and search forward' }
-)
-keymap.set('n', '#', functions.justHightlightStrictBackward,
-    { silent = true, desc = 'Highlight word without jumping and search backward' }
-)
-keymap.set('n', 'g*', functions.justHightlightWeakForward,
-    { silent = true, desc = 'Highlight word without jumping and search forward' }
-)
-keymap.set('n', 'g#', functions.justHightlightWeakBackward,
-    { silent = true, desc = 'Highlight word without jumping and search backward' }
-)
+setKeymap('n', '<leader>ft', functions.printFiletype, 'Just show filetype in cmdline')
+setKeymap('n', '<leader>dab', functions.deleteAllHiddenBuffers, 'Delete all windowless buffers')
+
+setKeymap('n', '*', functions.justHightlightStrictForward, 'Highlight word without jumping and search forward')
+setKeymap('n', '#', functions.justHightlightStrictBackward, 'Highlight word without jumping and search backward')
+setKeymap('n', 'g*', functions.justHightlightWeakForward, 'Highlight word without jumping and search forward')
+setKeymap('n', 'g#', functions.justHightlightWeakBackward, 'Highlight word without jumping and search backward')
