@@ -1,38 +1,27 @@
 local M = {}
 
-M.global = function()
-    local keymapSetter = {
-        opts = {
-            silent = true,
-            remap = false,
-        },
-    }
-
-    local mt = {}
-    function mt:__call(modes, keys, action, description)
-        self.opts.desc = description or tostring(action)
-        vim.keymap.set(modes, keys, action, self.opts)
-    end
-
-    setmetatable(keymapSetter, mt)
-    return keymapSetter
+local mt = {}
+function mt:__call(modes, keys, action, description)
+    self.opts.desc = description or tostring(action)
+    vim.keymap.set(modes, keys, action, self.opts)
 end
 
-function M.buffer(bufnr)
-    local setter = {
-        opts = {
-            silent = true,
-            remap = false,
-            buffer = bufnr,
-        },
+local function commonOpts()
+    return {
+        silent = true,
+        remap = false,
     }
+end
 
-    local mt = {}
-    function mt:__call(modes, keys, action, description)
-        self.opts.desc = description or tostring(action)
-        vim.keymap.set(modes, keys, action, self.opts)
-    end
-    return setmetatable(setter, mt)
+M.global = function()
+    return setmetatable({ opts = commonOpts(), }, mt)
+end
+
+M.buffer = function(bufnr)
+    local opts = commonOpts()
+    opts.buffer = bufnr
+
+    return setmetatable({ opts = opts, }, mt)
 end
 
 return M
