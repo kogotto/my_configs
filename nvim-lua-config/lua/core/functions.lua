@@ -1,5 +1,6 @@
 local M = {}
 
+-- Delete hidden buffers and misc
 local function atLeastOneWindow(bufnr)
     for _, _ in pairs(vim.fn.win_findbuf(bufnr)) do
         return true
@@ -23,10 +24,12 @@ M.deleteAllHiddenBuffers = function()
     end
 end
 
+-- Just print in cmdline current buffer file type
 M.printFiletype = function()
     print('filetype ' .. vim.bo.filetype)
 end
 
+-- Just highlight word under cursor on *,# and misc
 local FORWARD = 'FORWARD'
 local BACKWARD = 'BACKWARD'
 
