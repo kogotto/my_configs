@@ -30,21 +30,40 @@ local function setupLsp()
             notify.debug('LspAttach with ev =\n%s', toString.table(ev))
 
             local opts = {
-                noremap = true,
-                silent = true,
                 buffer = ev.buf,
+                silent = true,
+                remap = false,
             }
-            keymap.set('n', 'gd', vim.lsp.buf.declaration, opts)
-            keymap.set('n', 'gD', '<cmd>Lspsaga peek_definition<CR>', opts)
-            keymap.set('n', 'gi', telescope.lsp_implementations, opts)
-            keymap.set('n', 'gr', telescope.lsp_references, opts)
-            keymap.set('n', 'gs', '<cmd>LspClangdSwitchSourceHeader<CR>', opts)
-            keymap.set('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
-            keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
-            keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
-            keymap.set('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-            keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', opts)
-            keymap.set('n', '<leader>lo', '<cmd>Lspsaga outline<CR>', opts)
+            local function setKeymap(modes, keys, action, description)
+                opts.desc = description or tostring(action)
+                local status, result = pcall(keymap.set, modes, keys, action, opts)
+                if not status then
+                    notify.warn('vim.keymap.set return an error: %s', result)
+                end
+            end
+
+            setKeymap('n', 'gd', vim.lsp.buf.declaration,
+                'Go to declaration')
+            setKeymap('n', 'gD', '<cmd>Lspsaga peek_definition<CR>',
+                'Show definition in floating window')
+            setKeymap('n', 'gi', telescope.lsp_implementations,
+                'Show implementations of interface')
+            setKeymap('n', 'gr', telescope.lsp_references,
+                'Show lsp references')
+            setKeymap('n', 'gs', '<cmd>LspClangdSwitchSourceHeader<CR>',
+                'Switch source/header')
+            setKeymap('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>',
+                'Show available code actions')
+            setKeymap('n', '<leader>rn', '<cmd>Lspsaga rename<CR>',
+                'Rename symbol across whole project')
+            setKeymap('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>',
+                'Show previous diagnostic')
+            setKeymap('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>',
+                'Show next diagnostic')
+            setKeymap('n', 'K', '<cmd>Lspsaga hover_doc<CR>',
+                'Show hover doc')
+            setKeymap('n', '<leader>lo', '<cmd>Lspsaga outline<CR>',
+                'Show outline of document in vertical split')
         end
     })
 end
