@@ -12,7 +12,6 @@ local function setupLsp()
         }
     )
 
-
     vim.lsp.config(
         '*',
         {
@@ -24,7 +23,7 @@ local function setupLsp()
 
     local keymap = vim.keymap
     vim.api.nvim_create_autocmd("LspAttach", {
-        group = vim.api.nvim_create_augroup("UsetLspConfig", {}),
+        group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(ev)
             local opts = {
                 noremap = true,
