@@ -46,7 +46,9 @@ end
 local function highlightAndSetSearch(format, direction)
     local word = vim.fn.expand('<cword>')
     local escapedWord = vim.fn.escape(word, '\\/.*$^~[]')
-    vim.fn.setreg('/', string.format(format, escapedWord))
+    local finalPattern = string.format(format, escapedWord)
+    vim.fn.setreg('/', finalPattern)
+    vim.fn.histadd('search', finalPattern)
     vim.v.searchforward = isForward(direction) and 1 or 0
     vim.opt.hlsearch = true
 end
