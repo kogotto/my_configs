@@ -19,6 +19,13 @@ return {
             'query',
             'bash',
             'markdown',
+            'html',
+            'css',
+            'javascript',
+            'typescript',
+            'tsx',
+            'json',
+            'yaml',
         })
 
         -- Включение подсветки синтаксиса встроенными средствами Neovim 0.12+

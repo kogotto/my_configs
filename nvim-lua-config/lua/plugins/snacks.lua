@@ -11,6 +11,9 @@ return {
             debounce = 0,
             notify_jump = true,
         },
+        notify = {
+            enabled = true,
+        },
         notifier = {
             enabled = true,
             style = 'compact',
@@ -65,6 +68,11 @@ return {
         {
             '[[', function() Snacks.words.jump(-vim.v.count1) end,
             desc = 'Previous word', mode = { 'n', 'x', }
+        },
+        -- notifier
+        {
+            '<leader>fnh', function() Snacks.notifier.show_history() end,
+            desc = 'Show [n]otification [h]istory'
         },
     }
 }

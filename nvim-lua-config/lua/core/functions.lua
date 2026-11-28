@@ -1,5 +1,6 @@
 local M = {}
 
+-- Delete hidden buffers and misc
 local function atLeastOneWindow(bufnr)
     for _, _ in pairs(vim.fn.win_findbuf(bufnr)) do
         return true
@@ -23,10 +24,12 @@ M.deleteAllHiddenBuffers = function()
     end
 end
 
+-- Just print in cmdline current buffer file type
 M.printFiletype = function()
     print('filetype ' .. vim.bo.filetype)
 end
 
+-- Just highlight word under cursor on *,# and misc
 local FORWARD = 'FORWARD'
 local BACKWARD = 'BACKWARD'
 
@@ -43,7 +46,9 @@ end
 local function highlightAndSetSearch(format, direction)
     local word = vim.fn.expand('<cword>')
     local escapedWord = vim.fn.escape(word, '\\/.*$^~[]')
-    vim.fn.setreg('/', string.format(format, escapedWord))
+    local finalPattern = string.format(format, escapedWord)
+    vim.fn.setreg('/', finalPattern)
+    vim.fn.histadd('search', finalPattern)
     vim.v.searchforward = isForward(direction) and 1 or 0
     vim.opt.hlsearch = true
 end

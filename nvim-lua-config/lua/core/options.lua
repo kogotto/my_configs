@@ -32,19 +32,19 @@ opt.scrolloff = 8
 -- Appearance
 opt.termguicolors = true
 opt.updatetime = 250
-opt.background = "dark"
-opt.signcolumn = "yes"
+opt.background = 'dark'
+opt.signcolumn = 'yes:2'
 -- show tabs as >--- and trailing spaces as -
 --      non-breaking-space as +, and show > and < for text that extends beyond the window
-opt.listchars = "tab:>-,trail:-,nbsp:+,extends:>,precedes:<"
+opt.listchars = 'tab:>-,trail:-,nbsp:+,extends:>,precedes:<'
 opt.list = true
-opt.colorcolumn = "80"
+opt.colorcolumn = '80'
 
 -- Backspace
-opt.backspace = "indent,eol,start"
+opt.backspace = 'indent,eol,start'
 
 -- Clipboard
-opt.clipboard:append("unnamedplus")
+opt.clipboard:append('unnamedplus')
 
 -- Split windows
 opt.splitright = true
